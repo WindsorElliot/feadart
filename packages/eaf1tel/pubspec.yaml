@@ -1,0 +1,17 @@
+name: eaf1tel
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.4
+
+# Add regular dependencies here.
+dependencies:
+  freezed_annotation: ^3.1.0
+
+dev_dependencies:
+  build_runner: ^2.13.1
+  freezed: ^3.2.5
+  lints: ^6.0.0
+  test: ^1.25.6

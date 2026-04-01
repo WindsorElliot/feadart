@@ -1,0 +1,22 @@
+name: feadart
+
+publish_to: none
+environment:
+  sdk: ^3.10.8
+
+workspace:
+  - apps/f1eadart
+  - packages/eaf1tel
+
+dependencies:
+  freezed_annotation: ^3.1.0
+
+dev_dependencies:
+  build_runner: ^2.13.1
+  freezed: ^3.2.5
+  melos: ^7.5.0
+
+melos:
+  scripts:
+    generate:
+      run: melos exec -c 1 --depends-on build_runner -- dart run build_runner build
