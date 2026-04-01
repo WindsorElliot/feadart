@@ -1,1 +1,1 @@
-# dart & flutter project for implement EA FA realtime telemetry
+# dart & flutter project for implement EA F1 realtime telemetry
