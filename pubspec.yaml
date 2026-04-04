@@ -8,6 +8,7 @@ workspace:
   - apps/f1eadart
   - packages/eaf1tel
   - packages/assets_dealer
+  - packages/suzuka
 
 dependencies:
   dio: ^5.9.2
