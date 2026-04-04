@@ -351,12 +351,12 @@ $PacketCarTelemetryDataCopyWith<PacketCarTelemetryData> get copyWith => _$Packet
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarTelemetryData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other.carTelemetryData, carTelemetryData)&&(identical(other.mfdPanelIndex, mfdPanelIndex) || other.mfdPanelIndex == mfdPanelIndex)&&(identical(other.mfdPanelIndexSecondaryPlayer, mfdPanelIndexSecondaryPlayer) || other.mfdPanelIndexSecondaryPlayer == mfdPanelIndexSecondaryPlayer)&&(identical(other.suggestedGear, suggestedGear) || other.suggestedGear == suggestedGear));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarTelemetryData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other.carTelemetryData, carTelemetryData)&&(identical(other.mfdPanelIndex, mfdPanelIndex) || other.mfdPanelIndex == mfdPanelIndex)&&(identical(other.mfdPanelIndexSecondaryPlayer, mfdPanelIndexSecondaryPlayer) || other.mfdPanelIndexSecondaryPlayer == mfdPanelIndexSecondaryPlayer)&&(identical(other.suggestedGear, suggestedGear) || other.suggestedGear == suggestedGear));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(carTelemetryData),mfdPanelIndex,mfdPanelIndexSecondaryPlayer,suggestedGear);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(carTelemetryData),mfdPanelIndex,mfdPanelIndexSecondaryPlayer,suggestedGear);
 
 @override
 String toString() {
@@ -375,7 +375,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -388,9 +388,9 @@ class _$PacketCarTelemetryDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarTelemetryData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? carTelemetryData = null,Object? mfdPanelIndex = null,Object? mfdPanelIndexSecondaryPlayer = null,Object? suggestedGear = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? carTelemetryData = null,Object? mfdPanelIndex = null,Object? mfdPanelIndexSecondaryPlayer = null,Object? suggestedGear = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carTelemetryData: null == carTelemetryData ? _self.carTelemetryData : carTelemetryData // ignore: cast_nullable_to_non_nullable
 as List<CarTelemetryData>,mfdPanelIndex: null == mfdPanelIndex ? _self.mfdPanelIndex : mfdPanelIndex // ignore: cast_nullable_to_non_nullable
 as int,mfdPanelIndexSecondaryPlayer: null == mfdPanelIndexSecondaryPlayer ? _self.mfdPanelIndexSecondaryPlayer : mfdPanelIndexSecondaryPlayer // ignore: cast_nullable_to_non_nullable
@@ -398,7 +398,16 @@ as int,suggestedGear: null == suggestedGear ? _self.suggestedGear : suggestedGea
 as int,
   ));
 }
-
+/// Create a copy of PacketCarTelemetryData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -555,12 +564,12 @@ _$PacketCarTelemetryDataCopyWith<_PacketCarTelemetryData> get copyWith => __$Pac
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarTelemetryData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other._carTelemetryData, _carTelemetryData)&&(identical(other.mfdPanelIndex, mfdPanelIndex) || other.mfdPanelIndex == mfdPanelIndex)&&(identical(other.mfdPanelIndexSecondaryPlayer, mfdPanelIndexSecondaryPlayer) || other.mfdPanelIndexSecondaryPlayer == mfdPanelIndexSecondaryPlayer)&&(identical(other.suggestedGear, suggestedGear) || other.suggestedGear == suggestedGear));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarTelemetryData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other._carTelemetryData, _carTelemetryData)&&(identical(other.mfdPanelIndex, mfdPanelIndex) || other.mfdPanelIndex == mfdPanelIndex)&&(identical(other.mfdPanelIndexSecondaryPlayer, mfdPanelIndexSecondaryPlayer) || other.mfdPanelIndexSecondaryPlayer == mfdPanelIndexSecondaryPlayer)&&(identical(other.suggestedGear, suggestedGear) || other.suggestedGear == suggestedGear));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(_carTelemetryData),mfdPanelIndex,mfdPanelIndexSecondaryPlayer,suggestedGear);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(_carTelemetryData),mfdPanelIndex,mfdPanelIndexSecondaryPlayer,suggestedGear);
 
 @override
 String toString() {
@@ -579,7 +588,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -592,9 +601,9 @@ class __$PacketCarTelemetryDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarTelemetryData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? carTelemetryData = null,Object? mfdPanelIndex = null,Object? mfdPanelIndexSecondaryPlayer = null,Object? suggestedGear = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? carTelemetryData = null,Object? mfdPanelIndex = null,Object? mfdPanelIndexSecondaryPlayer = null,Object? suggestedGear = null,}) {
   return _then(_PacketCarTelemetryData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carTelemetryData: null == carTelemetryData ? _self._carTelemetryData : carTelemetryData // ignore: cast_nullable_to_non_nullable
 as List<CarTelemetryData>,mfdPanelIndex: null == mfdPanelIndex ? _self.mfdPanelIndex : mfdPanelIndex // ignore: cast_nullable_to_non_nullable
 as int,mfdPanelIndexSecondaryPlayer: null == mfdPanelIndexSecondaryPlayer ? _self.mfdPanelIndexSecondaryPlayer : mfdPanelIndexSecondaryPlayer // ignore: cast_nullable_to_non_nullable
@@ -603,7 +612,16 @@ as int,
   ));
 }
 
-
+/// Create a copy of PacketCarTelemetryData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

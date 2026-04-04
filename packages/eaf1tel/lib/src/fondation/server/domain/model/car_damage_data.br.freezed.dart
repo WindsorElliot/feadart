@@ -354,12 +354,12 @@ $PacketCarDamageDataCopyWith<PacketCarDamageData> get copyWith => _$PacketCarDam
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarDamageData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other.carDamageData, carDamageData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarDamageData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other.carDamageData, carDamageData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(carDamageData));
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(carDamageData));
 
 @override
 String toString() {
@@ -378,7 +378,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -391,14 +391,23 @@ class _$PacketCarDamageDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarDamageData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? carDamageData = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? carDamageData = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carDamageData: null == carDamageData ? _self.carDamageData : carDamageData // ignore: cast_nullable_to_non_nullable
 as List<CarDamageData>,
   ));
 }
-
+/// Create a copy of PacketCarDamageData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -552,12 +561,12 @@ _$PacketCarDamageDataCopyWith<_PacketCarDamageData> get copyWith => __$PacketCar
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarDamageData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other._carDamageData, _carDamageData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarDamageData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other._carDamageData, _carDamageData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(_carDamageData));
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(_carDamageData));
 
 @override
 String toString() {
@@ -576,7 +585,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -589,15 +598,24 @@ class __$PacketCarDamageDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarDamageData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? carDamageData = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? carDamageData = null,}) {
   return _then(_PacketCarDamageData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carDamageData: null == carDamageData ? _self._carDamageData : carDamageData // ignore: cast_nullable_to_non_nullable
 as List<CarDamageData>,
   ));
 }
 
-
+/// Create a copy of PacketCarDamageData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

@@ -25,12 +25,12 @@ $PacketMotionExDataCopyWith<PacketMotionExData> get copyWith => _$PacketMotionEx
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketMotionExData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other.suspensionPosition, suspensionPosition)&&const DeepCollectionEquality().equals(other.suspensionVelocity, suspensionVelocity)&&const DeepCollectionEquality().equals(other.suspensionAcceleration, suspensionAcceleration)&&const DeepCollectionEquality().equals(other.wheelSpeed, wheelSpeed)&&const DeepCollectionEquality().equals(other.wheelSlipRatio, wheelSlipRatio)&&const DeepCollectionEquality().equals(other.wheelSlipAngle, wheelSlipAngle)&&const DeepCollectionEquality().equals(other.wheelLatForce, wheelLatForce)&&const DeepCollectionEquality().equals(other.wheelLongForce, wheelLongForce)&&(identical(other.heightOfCOGAboveGround, heightOfCOGAboveGround) || other.heightOfCOGAboveGround == heightOfCOGAboveGround)&&(identical(other.localVelocityX, localVelocityX) || other.localVelocityX == localVelocityX)&&(identical(other.localVelocityY, localVelocityY) || other.localVelocityY == localVelocityY)&&(identical(other.localVelocityZ, localVelocityZ) || other.localVelocityZ == localVelocityZ)&&(identical(other.angularVelocityX, angularVelocityX) || other.angularVelocityX == angularVelocityX)&&(identical(other.angularVelocityY, angularVelocityY) || other.angularVelocityY == angularVelocityY)&&(identical(other.angularVelocityZ, angularVelocityZ) || other.angularVelocityZ == angularVelocityZ)&&(identical(other.angularAccelerationX, angularAccelerationX) || other.angularAccelerationX == angularAccelerationX)&&(identical(other.angularAccelerationY, angularAccelerationY) || other.angularAccelerationY == angularAccelerationY)&&(identical(other.angularAccelerationZ, angularAccelerationZ) || other.angularAccelerationZ == angularAccelerationZ)&&(identical(other.frontWheelsAngle, frontWheelsAngle) || other.frontWheelsAngle == frontWheelsAngle)&&const DeepCollectionEquality().equals(other.wheelVertForce, wheelVertForce)&&(identical(other.frontAeroHeight, frontAeroHeight) || other.frontAeroHeight == frontAeroHeight)&&(identical(other.rearAeroHeight, rearAeroHeight) || other.rearAeroHeight == rearAeroHeight)&&(identical(other.frontRollAngle, frontRollAngle) || other.frontRollAngle == frontRollAngle)&&(identical(other.rearRollAngle, rearRollAngle) || other.rearRollAngle == rearRollAngle)&&(identical(other.chassisYaw, chassisYaw) || other.chassisYaw == chassisYaw));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketMotionExData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other.suspensionPosition, suspensionPosition)&&const DeepCollectionEquality().equals(other.suspensionVelocity, suspensionVelocity)&&const DeepCollectionEquality().equals(other.suspensionAcceleration, suspensionAcceleration)&&const DeepCollectionEquality().equals(other.wheelSpeed, wheelSpeed)&&const DeepCollectionEquality().equals(other.wheelSlipRatio, wheelSlipRatio)&&const DeepCollectionEquality().equals(other.wheelSlipAngle, wheelSlipAngle)&&const DeepCollectionEquality().equals(other.wheelLatForce, wheelLatForce)&&const DeepCollectionEquality().equals(other.wheelLongForce, wheelLongForce)&&(identical(other.heightOfCOGAboveGround, heightOfCOGAboveGround) || other.heightOfCOGAboveGround == heightOfCOGAboveGround)&&(identical(other.localVelocityX, localVelocityX) || other.localVelocityX == localVelocityX)&&(identical(other.localVelocityY, localVelocityY) || other.localVelocityY == localVelocityY)&&(identical(other.localVelocityZ, localVelocityZ) || other.localVelocityZ == localVelocityZ)&&(identical(other.angularVelocityX, angularVelocityX) || other.angularVelocityX == angularVelocityX)&&(identical(other.angularVelocityY, angularVelocityY) || other.angularVelocityY == angularVelocityY)&&(identical(other.angularVelocityZ, angularVelocityZ) || other.angularVelocityZ == angularVelocityZ)&&(identical(other.angularAccelerationX, angularAccelerationX) || other.angularAccelerationX == angularAccelerationX)&&(identical(other.angularAccelerationY, angularAccelerationY) || other.angularAccelerationY == angularAccelerationY)&&(identical(other.angularAccelerationZ, angularAccelerationZ) || other.angularAccelerationZ == angularAccelerationZ)&&(identical(other.frontWheelsAngle, frontWheelsAngle) || other.frontWheelsAngle == frontWheelsAngle)&&const DeepCollectionEquality().equals(other.wheelVertForce, wheelVertForce)&&(identical(other.frontAeroHeight, frontAeroHeight) || other.frontAeroHeight == frontAeroHeight)&&(identical(other.rearAeroHeight, rearAeroHeight) || other.rearAeroHeight == rearAeroHeight)&&(identical(other.frontRollAngle, frontRollAngle) || other.frontRollAngle == frontRollAngle)&&(identical(other.rearRollAngle, rearRollAngle) || other.rearRollAngle == rearRollAngle)&&(identical(other.chassisYaw, chassisYaw) || other.chassisYaw == chassisYaw));
 }
 
 
 @override
-int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(suspensionPosition),const DeepCollectionEquality().hash(suspensionVelocity),const DeepCollectionEquality().hash(suspensionAcceleration),const DeepCollectionEquality().hash(wheelSpeed),const DeepCollectionEquality().hash(wheelSlipRatio),const DeepCollectionEquality().hash(wheelSlipAngle),const DeepCollectionEquality().hash(wheelLatForce),const DeepCollectionEquality().hash(wheelLongForce),heightOfCOGAboveGround,localVelocityX,localVelocityY,localVelocityZ,angularVelocityX,angularVelocityY,angularVelocityZ,angularAccelerationX,angularAccelerationY,angularAccelerationZ,frontWheelsAngle,const DeepCollectionEquality().hash(wheelVertForce),frontAeroHeight,rearAeroHeight,frontRollAngle,rearRollAngle,chassisYaw]);
+int get hashCode => Object.hashAll([runtimeType,header,const DeepCollectionEquality().hash(suspensionPosition),const DeepCollectionEquality().hash(suspensionVelocity),const DeepCollectionEquality().hash(suspensionAcceleration),const DeepCollectionEquality().hash(wheelSpeed),const DeepCollectionEquality().hash(wheelSlipRatio),const DeepCollectionEquality().hash(wheelSlipAngle),const DeepCollectionEquality().hash(wheelLatForce),const DeepCollectionEquality().hash(wheelLongForce),heightOfCOGAboveGround,localVelocityX,localVelocityY,localVelocityZ,angularVelocityX,angularVelocityY,angularVelocityZ,angularAccelerationX,angularAccelerationY,angularAccelerationZ,frontWheelsAngle,const DeepCollectionEquality().hash(wheelVertForce),frontAeroHeight,rearAeroHeight,frontRollAngle,rearRollAngle,chassisYaw]);
 
 @override
 String toString() {
@@ -49,7 +49,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -62,9 +62,9 @@ class _$PacketMotionExDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketMotionExData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? suspensionPosition = null,Object? suspensionVelocity = null,Object? suspensionAcceleration = null,Object? wheelSpeed = null,Object? wheelSlipRatio = null,Object? wheelSlipAngle = null,Object? wheelLatForce = null,Object? wheelLongForce = null,Object? heightOfCOGAboveGround = null,Object? localVelocityX = null,Object? localVelocityY = null,Object? localVelocityZ = null,Object? angularVelocityX = null,Object? angularVelocityY = null,Object? angularVelocityZ = null,Object? angularAccelerationX = null,Object? angularAccelerationY = null,Object? angularAccelerationZ = null,Object? frontWheelsAngle = null,Object? wheelVertForce = null,Object? frontAeroHeight = null,Object? rearAeroHeight = null,Object? frontRollAngle = null,Object? rearRollAngle = null,Object? chassisYaw = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? suspensionPosition = null,Object? suspensionVelocity = null,Object? suspensionAcceleration = null,Object? wheelSpeed = null,Object? wheelSlipRatio = null,Object? wheelSlipAngle = null,Object? wheelLatForce = null,Object? wheelLongForce = null,Object? heightOfCOGAboveGround = null,Object? localVelocityX = null,Object? localVelocityY = null,Object? localVelocityZ = null,Object? angularVelocityX = null,Object? angularVelocityY = null,Object? angularVelocityZ = null,Object? angularAccelerationX = null,Object? angularAccelerationY = null,Object? angularAccelerationZ = null,Object? frontWheelsAngle = null,Object? wheelVertForce = null,Object? frontAeroHeight = null,Object? rearAeroHeight = null,Object? frontRollAngle = null,Object? rearRollAngle = null,Object? chassisYaw = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,suspensionPosition: null == suspensionPosition ? _self.suspensionPosition : suspensionPosition // ignore: cast_nullable_to_non_nullable
 as List<double>,suspensionVelocity: null == suspensionVelocity ? _self.suspensionVelocity : suspensionVelocity // ignore: cast_nullable_to_non_nullable
 as List<double>,suspensionAcceleration: null == suspensionAcceleration ? _self.suspensionAcceleration : suspensionAcceleration // ignore: cast_nullable_to_non_nullable
@@ -93,7 +93,16 @@ as double,chassisYaw: null == chassisYaw ? _self.chassisYaw : chassisYaw // igno
 as double,
   ));
 }
-
+/// Create a copy of PacketMotionExData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -319,12 +328,12 @@ _$PacketMotionExDataCopyWith<_PacketMotionExData> get copyWith => __$PacketMotio
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketMotionExData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other._suspensionPosition, _suspensionPosition)&&const DeepCollectionEquality().equals(other._suspensionVelocity, _suspensionVelocity)&&const DeepCollectionEquality().equals(other._suspensionAcceleration, _suspensionAcceleration)&&const DeepCollectionEquality().equals(other._wheelSpeed, _wheelSpeed)&&const DeepCollectionEquality().equals(other._wheelSlipRatio, _wheelSlipRatio)&&const DeepCollectionEquality().equals(other._wheelSlipAngle, _wheelSlipAngle)&&const DeepCollectionEquality().equals(other._wheelLatForce, _wheelLatForce)&&const DeepCollectionEquality().equals(other._wheelLongForce, _wheelLongForce)&&(identical(other.heightOfCOGAboveGround, heightOfCOGAboveGround) || other.heightOfCOGAboveGround == heightOfCOGAboveGround)&&(identical(other.localVelocityX, localVelocityX) || other.localVelocityX == localVelocityX)&&(identical(other.localVelocityY, localVelocityY) || other.localVelocityY == localVelocityY)&&(identical(other.localVelocityZ, localVelocityZ) || other.localVelocityZ == localVelocityZ)&&(identical(other.angularVelocityX, angularVelocityX) || other.angularVelocityX == angularVelocityX)&&(identical(other.angularVelocityY, angularVelocityY) || other.angularVelocityY == angularVelocityY)&&(identical(other.angularVelocityZ, angularVelocityZ) || other.angularVelocityZ == angularVelocityZ)&&(identical(other.angularAccelerationX, angularAccelerationX) || other.angularAccelerationX == angularAccelerationX)&&(identical(other.angularAccelerationY, angularAccelerationY) || other.angularAccelerationY == angularAccelerationY)&&(identical(other.angularAccelerationZ, angularAccelerationZ) || other.angularAccelerationZ == angularAccelerationZ)&&(identical(other.frontWheelsAngle, frontWheelsAngle) || other.frontWheelsAngle == frontWheelsAngle)&&const DeepCollectionEquality().equals(other._wheelVertForce, _wheelVertForce)&&(identical(other.frontAeroHeight, frontAeroHeight) || other.frontAeroHeight == frontAeroHeight)&&(identical(other.rearAeroHeight, rearAeroHeight) || other.rearAeroHeight == rearAeroHeight)&&(identical(other.frontRollAngle, frontRollAngle) || other.frontRollAngle == frontRollAngle)&&(identical(other.rearRollAngle, rearRollAngle) || other.rearRollAngle == rearRollAngle)&&(identical(other.chassisYaw, chassisYaw) || other.chassisYaw == chassisYaw));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketMotionExData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other._suspensionPosition, _suspensionPosition)&&const DeepCollectionEquality().equals(other._suspensionVelocity, _suspensionVelocity)&&const DeepCollectionEquality().equals(other._suspensionAcceleration, _suspensionAcceleration)&&const DeepCollectionEquality().equals(other._wheelSpeed, _wheelSpeed)&&const DeepCollectionEquality().equals(other._wheelSlipRatio, _wheelSlipRatio)&&const DeepCollectionEquality().equals(other._wheelSlipAngle, _wheelSlipAngle)&&const DeepCollectionEquality().equals(other._wheelLatForce, _wheelLatForce)&&const DeepCollectionEquality().equals(other._wheelLongForce, _wheelLongForce)&&(identical(other.heightOfCOGAboveGround, heightOfCOGAboveGround) || other.heightOfCOGAboveGround == heightOfCOGAboveGround)&&(identical(other.localVelocityX, localVelocityX) || other.localVelocityX == localVelocityX)&&(identical(other.localVelocityY, localVelocityY) || other.localVelocityY == localVelocityY)&&(identical(other.localVelocityZ, localVelocityZ) || other.localVelocityZ == localVelocityZ)&&(identical(other.angularVelocityX, angularVelocityX) || other.angularVelocityX == angularVelocityX)&&(identical(other.angularVelocityY, angularVelocityY) || other.angularVelocityY == angularVelocityY)&&(identical(other.angularVelocityZ, angularVelocityZ) || other.angularVelocityZ == angularVelocityZ)&&(identical(other.angularAccelerationX, angularAccelerationX) || other.angularAccelerationX == angularAccelerationX)&&(identical(other.angularAccelerationY, angularAccelerationY) || other.angularAccelerationY == angularAccelerationY)&&(identical(other.angularAccelerationZ, angularAccelerationZ) || other.angularAccelerationZ == angularAccelerationZ)&&(identical(other.frontWheelsAngle, frontWheelsAngle) || other.frontWheelsAngle == frontWheelsAngle)&&const DeepCollectionEquality().equals(other._wheelVertForce, _wheelVertForce)&&(identical(other.frontAeroHeight, frontAeroHeight) || other.frontAeroHeight == frontAeroHeight)&&(identical(other.rearAeroHeight, rearAeroHeight) || other.rearAeroHeight == rearAeroHeight)&&(identical(other.frontRollAngle, frontRollAngle) || other.frontRollAngle == frontRollAngle)&&(identical(other.rearRollAngle, rearRollAngle) || other.rearRollAngle == rearRollAngle)&&(identical(other.chassisYaw, chassisYaw) || other.chassisYaw == chassisYaw));
 }
 
 
 @override
-int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(_suspensionPosition),const DeepCollectionEquality().hash(_suspensionVelocity),const DeepCollectionEquality().hash(_suspensionAcceleration),const DeepCollectionEquality().hash(_wheelSpeed),const DeepCollectionEquality().hash(_wheelSlipRatio),const DeepCollectionEquality().hash(_wheelSlipAngle),const DeepCollectionEquality().hash(_wheelLatForce),const DeepCollectionEquality().hash(_wheelLongForce),heightOfCOGAboveGround,localVelocityX,localVelocityY,localVelocityZ,angularVelocityX,angularVelocityY,angularVelocityZ,angularAccelerationX,angularAccelerationY,angularAccelerationZ,frontWheelsAngle,const DeepCollectionEquality().hash(_wheelVertForce),frontAeroHeight,rearAeroHeight,frontRollAngle,rearRollAngle,chassisYaw]);
+int get hashCode => Object.hashAll([runtimeType,header,const DeepCollectionEquality().hash(_suspensionPosition),const DeepCollectionEquality().hash(_suspensionVelocity),const DeepCollectionEquality().hash(_suspensionAcceleration),const DeepCollectionEquality().hash(_wheelSpeed),const DeepCollectionEquality().hash(_wheelSlipRatio),const DeepCollectionEquality().hash(_wheelSlipAngle),const DeepCollectionEquality().hash(_wheelLatForce),const DeepCollectionEquality().hash(_wheelLongForce),heightOfCOGAboveGround,localVelocityX,localVelocityY,localVelocityZ,angularVelocityX,angularVelocityY,angularVelocityZ,angularAccelerationX,angularAccelerationY,angularAccelerationZ,frontWheelsAngle,const DeepCollectionEquality().hash(_wheelVertForce),frontAeroHeight,rearAeroHeight,frontRollAngle,rearRollAngle,chassisYaw]);
 
 @override
 String toString() {
@@ -343,7 +352,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -356,9 +365,9 @@ class __$PacketMotionExDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketMotionExData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? suspensionPosition = null,Object? suspensionVelocity = null,Object? suspensionAcceleration = null,Object? wheelSpeed = null,Object? wheelSlipRatio = null,Object? wheelSlipAngle = null,Object? wheelLatForce = null,Object? wheelLongForce = null,Object? heightOfCOGAboveGround = null,Object? localVelocityX = null,Object? localVelocityY = null,Object? localVelocityZ = null,Object? angularVelocityX = null,Object? angularVelocityY = null,Object? angularVelocityZ = null,Object? angularAccelerationX = null,Object? angularAccelerationY = null,Object? angularAccelerationZ = null,Object? frontWheelsAngle = null,Object? wheelVertForce = null,Object? frontAeroHeight = null,Object? rearAeroHeight = null,Object? frontRollAngle = null,Object? rearRollAngle = null,Object? chassisYaw = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? suspensionPosition = null,Object? suspensionVelocity = null,Object? suspensionAcceleration = null,Object? wheelSpeed = null,Object? wheelSlipRatio = null,Object? wheelSlipAngle = null,Object? wheelLatForce = null,Object? wheelLongForce = null,Object? heightOfCOGAboveGround = null,Object? localVelocityX = null,Object? localVelocityY = null,Object? localVelocityZ = null,Object? angularVelocityX = null,Object? angularVelocityY = null,Object? angularVelocityZ = null,Object? angularAccelerationX = null,Object? angularAccelerationY = null,Object? angularAccelerationZ = null,Object? frontWheelsAngle = null,Object? wheelVertForce = null,Object? frontAeroHeight = null,Object? rearAeroHeight = null,Object? frontRollAngle = null,Object? rearRollAngle = null,Object? chassisYaw = null,}) {
   return _then(_PacketMotionExData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,suspensionPosition: null == suspensionPosition ? _self._suspensionPosition : suspensionPosition // ignore: cast_nullable_to_non_nullable
 as List<double>,suspensionVelocity: null == suspensionVelocity ? _self._suspensionVelocity : suspensionVelocity // ignore: cast_nullable_to_non_nullable
 as List<double>,suspensionAcceleration: null == suspensionAcceleration ? _self._suspensionAcceleration : suspensionAcceleration // ignore: cast_nullable_to_non_nullable
@@ -388,7 +397,16 @@ as double,
   ));
 }
 
-
+/// Create a copy of PacketMotionExData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

@@ -303,12 +303,12 @@ $PacketLobbyInfoDataCopyWith<PacketLobbyInfoData> get copyWith => _$PacketLobbyI
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketLobbyInfoData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.numPlayers, numPlayers) || other.numPlayers == numPlayers)&&const DeepCollectionEquality().equals(other.lobbyPlayers, lobbyPlayers));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketLobbyInfoData&&(identical(other.header, header) || other.header == header)&&(identical(other.numPlayers, numPlayers) || other.numPlayers == numPlayers)&&const DeepCollectionEquality().equals(other.lobbyPlayers, lobbyPlayers));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),numPlayers,const DeepCollectionEquality().hash(lobbyPlayers));
+int get hashCode => Object.hash(runtimeType,header,numPlayers,const DeepCollectionEquality().hash(lobbyPlayers));
 
 @override
 String toString() {
@@ -327,7 +327,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -340,15 +340,24 @@ class _$PacketLobbyInfoDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketLobbyInfoData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? numPlayers = null,Object? lobbyPlayers = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? numPlayers = null,Object? lobbyPlayers = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,numPlayers: null == numPlayers ? _self.numPlayers : numPlayers // ignore: cast_nullable_to_non_nullable
 as int,lobbyPlayers: null == lobbyPlayers ? _self.lobbyPlayers : lobbyPlayers // ignore: cast_nullable_to_non_nullable
 as List<LobbyInfoData>,
   ));
 }
-
+/// Create a copy of PacketLobbyInfoData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -503,12 +512,12 @@ _$PacketLobbyInfoDataCopyWith<_PacketLobbyInfoData> get copyWith => __$PacketLob
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketLobbyInfoData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.numPlayers, numPlayers) || other.numPlayers == numPlayers)&&const DeepCollectionEquality().equals(other._lobbyPlayers, _lobbyPlayers));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketLobbyInfoData&&(identical(other.header, header) || other.header == header)&&(identical(other.numPlayers, numPlayers) || other.numPlayers == numPlayers)&&const DeepCollectionEquality().equals(other._lobbyPlayers, _lobbyPlayers));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),numPlayers,const DeepCollectionEquality().hash(_lobbyPlayers));
+int get hashCode => Object.hash(runtimeType,header,numPlayers,const DeepCollectionEquality().hash(_lobbyPlayers));
 
 @override
 String toString() {
@@ -527,7 +536,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -540,16 +549,25 @@ class __$PacketLobbyInfoDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketLobbyInfoData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? numPlayers = null,Object? lobbyPlayers = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? numPlayers = null,Object? lobbyPlayers = null,}) {
   return _then(_PacketLobbyInfoData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,numPlayers: null == numPlayers ? _self.numPlayers : numPlayers // ignore: cast_nullable_to_non_nullable
 as int,lobbyPlayers: null == lobbyPlayers ? _self._lobbyPlayers : lobbyPlayers // ignore: cast_nullable_to_non_nullable
 as List<LobbyInfoData>,
   ));
 }
 
-
+/// Create a copy of PacketLobbyInfoData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

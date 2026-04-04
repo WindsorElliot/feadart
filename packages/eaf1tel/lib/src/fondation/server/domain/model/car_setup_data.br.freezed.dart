@@ -342,12 +342,12 @@ $PacketCarSetupDataCopyWith<PacketCarSetupData> get copyWith => _$PacketCarSetup
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarSetupData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other.carSetups, carSetups)&&(identical(other.nextFrontWingValue, nextFrontWingValue) || other.nextFrontWingValue == nextFrontWingValue));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketCarSetupData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other.carSetups, carSetups)&&(identical(other.nextFrontWingValue, nextFrontWingValue) || other.nextFrontWingValue == nextFrontWingValue));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(carSetups),nextFrontWingValue);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(carSetups),nextFrontWingValue);
 
 @override
 String toString() {
@@ -366,7 +366,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -379,15 +379,24 @@ class _$PacketCarSetupDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarSetupData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? carSetups = null,Object? nextFrontWingValue = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? carSetups = null,Object? nextFrontWingValue = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carSetups: null == carSetups ? _self.carSetups : carSetups // ignore: cast_nullable_to_non_nullable
 as List<CarSetupData>,nextFrontWingValue: null == nextFrontWingValue ? _self.nextFrontWingValue : nextFrontWingValue // ignore: cast_nullable_to_non_nullable
 as double,
   ));
 }
-
+/// Create a copy of PacketCarSetupData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -542,12 +551,12 @@ _$PacketCarSetupDataCopyWith<_PacketCarSetupData> get copyWith => __$PacketCarSe
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarSetupData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other._carSetups, _carSetups)&&(identical(other.nextFrontWingValue, nextFrontWingValue) || other.nextFrontWingValue == nextFrontWingValue));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketCarSetupData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other._carSetups, _carSetups)&&(identical(other.nextFrontWingValue, nextFrontWingValue) || other.nextFrontWingValue == nextFrontWingValue));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(_carSetups),nextFrontWingValue);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(_carSetups),nextFrontWingValue);
 
 @override
 String toString() {
@@ -566,7 +575,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -579,16 +588,25 @@ class __$PacketCarSetupDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketCarSetupData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? carSetups = null,Object? nextFrontWingValue = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? carSetups = null,Object? nextFrontWingValue = null,}) {
   return _then(_PacketCarSetupData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,carSetups: null == carSetups ? _self._carSetups : carSetups // ignore: cast_nullable_to_non_nullable
 as List<CarSetupData>,nextFrontWingValue: null == nextFrontWingValue ? _self.nextFrontWingValue : nextFrontWingValue // ignore: cast_nullable_to_non_nullable
 as double,
   ));
 }
 
-
+/// Create a copy of PacketCarSetupData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

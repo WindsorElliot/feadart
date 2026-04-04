@@ -333,12 +333,12 @@ $PacketFinalClassificationDataCopyWith<PacketFinalClassificationData> get copyWi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketFinalClassificationData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.numCars, numCars) || other.numCars == numCars)&&const DeepCollectionEquality().equals(other.classificationData, classificationData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketFinalClassificationData&&(identical(other.header, header) || other.header == header)&&(identical(other.numCars, numCars) || other.numCars == numCars)&&const DeepCollectionEquality().equals(other.classificationData, classificationData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),numCars,const DeepCollectionEquality().hash(classificationData));
+int get hashCode => Object.hash(runtimeType,header,numCars,const DeepCollectionEquality().hash(classificationData));
 
 @override
 String toString() {
@@ -357,7 +357,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -370,15 +370,24 @@ class _$PacketFinalClassificationDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketFinalClassificationData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? numCars = null,Object? classificationData = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? numCars = null,Object? classificationData = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,numCars: null == numCars ? _self.numCars : numCars // ignore: cast_nullable_to_non_nullable
 as int,classificationData: null == classificationData ? _self.classificationData : classificationData // ignore: cast_nullable_to_non_nullable
 as List<FinalClassificationData>,
   ));
 }
-
+/// Create a copy of PacketFinalClassificationData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -533,12 +542,12 @@ _$PacketFinalClassificationDataCopyWith<_PacketFinalClassificationData> get copy
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketFinalClassificationData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.numCars, numCars) || other.numCars == numCars)&&const DeepCollectionEquality().equals(other._classificationData, _classificationData));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketFinalClassificationData&&(identical(other.header, header) || other.header == header)&&(identical(other.numCars, numCars) || other.numCars == numCars)&&const DeepCollectionEquality().equals(other._classificationData, _classificationData));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),numCars,const DeepCollectionEquality().hash(_classificationData));
+int get hashCode => Object.hash(runtimeType,header,numCars,const DeepCollectionEquality().hash(_classificationData));
 
 @override
 String toString() {
@@ -557,7 +566,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -570,16 +579,25 @@ class __$PacketFinalClassificationDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketFinalClassificationData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? numCars = null,Object? classificationData = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? numCars = null,Object? classificationData = null,}) {
   return _then(_PacketFinalClassificationData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,numCars: null == numCars ? _self.numCars : numCars // ignore: cast_nullable_to_non_nullable
 as int,classificationData: null == classificationData ? _self._classificationData : classificationData // ignore: cast_nullable_to_non_nullable
 as List<FinalClassificationData>,
   ));
 }
 
-
+/// Create a copy of PacketFinalClassificationData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

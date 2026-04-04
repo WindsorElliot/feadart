@@ -372,12 +372,12 @@ $PacketLapDataCopyWith<PacketLapData> get copyWith => _$PacketLapDataCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketLapData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other.lapData, lapData)&&(identical(other.timeTrialPBCarIdx, timeTrialPBCarIdx) || other.timeTrialPBCarIdx == timeTrialPBCarIdx)&&(identical(other.timeTrialRivalCarIdx, timeTrialRivalCarIdx) || other.timeTrialRivalCarIdx == timeTrialRivalCarIdx));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketLapData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other.lapData, lapData)&&(identical(other.timeTrialPBCarIdx, timeTrialPBCarIdx) || other.timeTrialPBCarIdx == timeTrialPBCarIdx)&&(identical(other.timeTrialRivalCarIdx, timeTrialRivalCarIdx) || other.timeTrialRivalCarIdx == timeTrialRivalCarIdx));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(lapData),timeTrialPBCarIdx,timeTrialRivalCarIdx);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(lapData),timeTrialPBCarIdx,timeTrialRivalCarIdx);
 
 @override
 String toString() {
@@ -396,7 +396,7 @@ $Res call({
 });
 
 
-
+$PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -409,16 +409,25 @@ class _$PacketLapDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketLapData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? lapData = null,Object? timeTrialPBCarIdx = null,Object? timeTrialRivalCarIdx = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? lapData = null,Object? timeTrialPBCarIdx = null,Object? timeTrialRivalCarIdx = null,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,lapData: null == lapData ? _self.lapData : lapData // ignore: cast_nullable_to_non_nullable
 as List<LapData>,timeTrialPBCarIdx: null == timeTrialPBCarIdx ? _self.timeTrialPBCarIdx : timeTrialPBCarIdx // ignore: cast_nullable_to_non_nullable
 as int,timeTrialRivalCarIdx: null == timeTrialRivalCarIdx ? _self.timeTrialRivalCarIdx : timeTrialRivalCarIdx // ignore: cast_nullable_to_non_nullable
 as int,
   ));
 }
-
+/// Create a copy of PacketLapData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 
@@ -574,12 +583,12 @@ _$PacketLapDataCopyWith<_PacketLapData> get copyWith => __$PacketLapDataCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketLapData&&const DeepCollectionEquality().equals(other.header, header)&&const DeepCollectionEquality().equals(other._lapData, _lapData)&&(identical(other.timeTrialPBCarIdx, timeTrialPBCarIdx) || other.timeTrialPBCarIdx == timeTrialPBCarIdx)&&(identical(other.timeTrialRivalCarIdx, timeTrialRivalCarIdx) || other.timeTrialRivalCarIdx == timeTrialRivalCarIdx));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketLapData&&(identical(other.header, header) || other.header == header)&&const DeepCollectionEquality().equals(other._lapData, _lapData)&&(identical(other.timeTrialPBCarIdx, timeTrialPBCarIdx) || other.timeTrialPBCarIdx == timeTrialPBCarIdx)&&(identical(other.timeTrialRivalCarIdx, timeTrialRivalCarIdx) || other.timeTrialRivalCarIdx == timeTrialRivalCarIdx));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),const DeepCollectionEquality().hash(_lapData),timeTrialPBCarIdx,timeTrialRivalCarIdx);
+int get hashCode => Object.hash(runtimeType,header,const DeepCollectionEquality().hash(_lapData),timeTrialPBCarIdx,timeTrialRivalCarIdx);
 
 @override
 String toString() {
@@ -598,7 +607,7 @@ $Res call({
 });
 
 
-
+@override $PacketHeaderCopyWith<$Res> get header;
 
 }
 /// @nodoc
@@ -611,9 +620,9 @@ class __$PacketLapDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketLapData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? lapData = null,Object? timeTrialPBCarIdx = null,Object? timeTrialRivalCarIdx = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? lapData = null,Object? timeTrialPBCarIdx = null,Object? timeTrialRivalCarIdx = null,}) {
   return _then(_PacketLapData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,lapData: null == lapData ? _self._lapData : lapData // ignore: cast_nullable_to_non_nullable
 as List<LapData>,timeTrialPBCarIdx: null == timeTrialPBCarIdx ? _self.timeTrialPBCarIdx : timeTrialPBCarIdx // ignore: cast_nullable_to_non_nullable
 as int,timeTrialRivalCarIdx: null == timeTrialRivalCarIdx ? _self.timeTrialRivalCarIdx : timeTrialRivalCarIdx // ignore: cast_nullable_to_non_nullable
@@ -621,7 +630,16 @@ as int,
   ));
 }
 
-
+/// Create a copy of PacketLapData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}
 }
 
 // dart format on

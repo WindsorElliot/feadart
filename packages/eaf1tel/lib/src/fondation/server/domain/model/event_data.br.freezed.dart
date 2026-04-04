@@ -1213,12 +1213,12 @@ $PacketEventDataCopyWith<PacketEventData> get copyWith => _$PacketEventDataCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketEventData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.eventStringCode, eventStringCode) || other.eventStringCode == eventStringCode)&&(identical(other.eventDetails, eventDetails) || other.eventDetails == eventDetails));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PacketEventData&&(identical(other.header, header) || other.header == header)&&(identical(other.eventStringCode, eventStringCode) || other.eventStringCode == eventStringCode)&&(identical(other.eventDetails, eventDetails) || other.eventDetails == eventDetails));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),eventStringCode,eventDetails);
+int get hashCode => Object.hash(runtimeType,header,eventStringCode,eventDetails);
 
 @override
 String toString() {
@@ -1237,7 +1237,7 @@ $Res call({
 });
 
 
-$EventDataDetailsCopyWith<$Res>? get eventDetails;
+$PacketHeaderCopyWith<$Res> get header;$EventDataDetailsCopyWith<$Res>? get eventDetails;
 
 }
 /// @nodoc
@@ -1250,15 +1250,24 @@ class _$PacketEventDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketEventData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? header = freezed,Object? eventStringCode = null,Object? eventDetails = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? header = null,Object? eventStringCode = null,Object? eventDetails = freezed,}) {
   return _then(_self.copyWith(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,eventStringCode: null == eventStringCode ? _self.eventStringCode : eventStringCode // ignore: cast_nullable_to_non_nullable
 as String,eventDetails: freezed == eventDetails ? _self.eventDetails : eventDetails // ignore: cast_nullable_to_non_nullable
 as EventDataDetails?,
   ));
 }
 /// Create a copy of PacketEventData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}/// Create a copy of PacketEventData
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -1419,12 +1428,12 @@ _$PacketEventDataCopyWith<_PacketEventData> get copyWith => __$PacketEventDataCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketEventData&&const DeepCollectionEquality().equals(other.header, header)&&(identical(other.eventStringCode, eventStringCode) || other.eventStringCode == eventStringCode)&&(identical(other.eventDetails, eventDetails) || other.eventDetails == eventDetails));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PacketEventData&&(identical(other.header, header) || other.header == header)&&(identical(other.eventStringCode, eventStringCode) || other.eventStringCode == eventStringCode)&&(identical(other.eventDetails, eventDetails) || other.eventDetails == eventDetails));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(header),eventStringCode,eventDetails);
+int get hashCode => Object.hash(runtimeType,header,eventStringCode,eventDetails);
 
 @override
 String toString() {
@@ -1443,7 +1452,7 @@ $Res call({
 });
 
 
-@override $EventDataDetailsCopyWith<$Res>? get eventDetails;
+@override $PacketHeaderCopyWith<$Res> get header;@override $EventDataDetailsCopyWith<$Res>? get eventDetails;
 
 }
 /// @nodoc
@@ -1456,9 +1465,9 @@ class __$PacketEventDataCopyWithImpl<$Res>
 
 /// Create a copy of PacketEventData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? header = freezed,Object? eventStringCode = null,Object? eventDetails = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? header = null,Object? eventStringCode = null,Object? eventDetails = freezed,}) {
   return _then(_PacketEventData(
-header: freezed == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
+header: null == header ? _self.header : header // ignore: cast_nullable_to_non_nullable
 as PacketHeader,eventStringCode: null == eventStringCode ? _self.eventStringCode : eventStringCode // ignore: cast_nullable_to_non_nullable
 as String,eventDetails: freezed == eventDetails ? _self.eventDetails : eventDetails // ignore: cast_nullable_to_non_nullable
 as EventDataDetails?,
@@ -1466,6 +1475,15 @@ as EventDataDetails?,
 }
 
 /// Create a copy of PacketEventData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketHeaderCopyWith<$Res> get header {
+  
+  return $PacketHeaderCopyWith<$Res>(_self.header, (value) {
+    return _then(_self.copyWith(header: value));
+  });
+}/// Create a copy of PacketEventData
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

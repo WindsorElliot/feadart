@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$F1Packet {
 
- InvalidType get data;
+ Object get data;
 
 
 
@@ -343,12 +343,12 @@ $SessionPacketCopyWith<SessionPacket> get copyWith => _$SessionPacketCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SessionPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SessionPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -367,7 +367,7 @@ $Res call({
 });
 
 
-
+$PacketSessionDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -380,14 +380,23 @@ class _$SessionPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(SessionPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketSessionData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketSessionDataCopyWith<$Res> get data {
+  
+  return $PacketSessionDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -409,12 +418,12 @@ $LapDataPacketCopyWith<LapDataPacket> get copyWith => _$LapDataPacketCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LapDataPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LapDataPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -433,7 +442,7 @@ $Res call({
 });
 
 
-
+$PacketLapDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -446,14 +455,23 @@ class _$LapDataPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(LapDataPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketLapData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketLapDataCopyWith<$Res> get data {
+  
+  return $PacketLapDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -550,12 +568,12 @@ $ParticipantsPacketCopyWith<ParticipantsPacket> get copyWith => _$ParticipantsPa
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is ParticipantsPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ParticipantsPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -574,7 +592,7 @@ $Res call({
 });
 
 
-
+$PacketParticipantsDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -587,14 +605,23 @@ class _$ParticipantsPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(ParticipantsPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketParticipantsData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketParticipantsDataCopyWith<$Res> get data {
+  
+  return $PacketParticipantsDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -841,12 +868,12 @@ $FinalClassificationPacketCopyWith<FinalClassificationPacket> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FinalClassificationPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FinalClassificationPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -865,7 +892,7 @@ $Res call({
 });
 
 
-
+$PacketFinalClassificationDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -878,14 +905,23 @@ class _$FinalClassificationPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(FinalClassificationPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketFinalClassificationData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketFinalClassificationDataCopyWith<$Res> get data {
+  
+  return $PacketFinalClassificationDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -907,12 +943,12 @@ $LobbyInfoPacketCopyWith<LobbyInfoPacket> get copyWith => _$LobbyInfoPacketCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LobbyInfoPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LobbyInfoPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -931,7 +967,7 @@ $Res call({
 });
 
 
-
+$PacketLobbyInfoDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -944,14 +980,23 @@ class _$LobbyInfoPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(LobbyInfoPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketLobbyInfoData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketLobbyInfoDataCopyWith<$Res> get data {
+  
+  return $PacketLobbyInfoDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -1048,12 +1093,12 @@ $SessionHistoryPacketCopyWith<SessionHistoryPacket> get copyWith => _$SessionHis
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is SessionHistoryPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SessionHistoryPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -1072,7 +1117,7 @@ $Res call({
 });
 
 
-
+$PacketSessionHistoryDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -1085,14 +1130,23 @@ class _$SessionHistoryPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(SessionHistoryPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketSessionHistoryData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketSessionHistoryDataCopyWith<$Res> get data {
+  
+  return $PacketSessionHistoryDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -1114,12 +1168,12 @@ $TyreSetsPacketCopyWith<TyreSetsPacket> get copyWith => _$TyreSetsPacketCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TyreSetsPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TyreSetsPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -1138,7 +1192,7 @@ $Res call({
 });
 
 
-
+$PacketTyreSetsDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -1151,14 +1205,23 @@ class _$TyreSetsPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(TyreSetsPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketTyreSetsData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketTyreSetsDataCopyWith<$Res> get data {
+  
+  return $PacketTyreSetsDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -1180,12 +1243,12 @@ $MotionExPacketCopyWith<MotionExPacket> get copyWith => _$MotionExPacketCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MotionExPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MotionExPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -1204,7 +1267,7 @@ $Res call({
 });
 
 
-
+$PacketMotionExDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -1217,14 +1280,23 @@ class _$MotionExPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(MotionExPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketMotionExData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketMotionExDataCopyWith<$Res> get data {
+  
+  return $PacketMotionExDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 /// @nodoc
@@ -1246,12 +1318,12 @@ $TimeTrialPacketCopyWith<TimeTrialPacket> get copyWith => _$TimeTrialPacketCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimeTrialPacket&&const DeepCollectionEquality().equals(other.data, data));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is TimeTrialPacket&&(identical(other.data, data) || other.data == data));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(data));
+int get hashCode => Object.hash(runtimeType,data);
 
 @override
 String toString() {
@@ -1270,7 +1342,7 @@ $Res call({
 });
 
 
-
+$PacketTimeTrialDataCopyWith<$Res> get data;
 
 }
 /// @nodoc
@@ -1283,14 +1355,23 @@ class _$TimeTrialPacketCopyWithImpl<$Res>
 
 /// Create a copy of F1Packet
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? data = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
   return _then(TimeTrialPacket(
-data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
 as PacketTimeTrialData,
   ));
 }
 
-
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketTimeTrialDataCopyWith<$Res> get data {
+  
+  return $PacketTimeTrialDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
 }
 
 // dart format on
