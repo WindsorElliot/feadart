@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:eaf1tel/eaf1tel.dart';
+import 'package:eaf1tel/src/fondation/debug/logger.dart';
 
 void main() {
   unawaited(
@@ -8,15 +9,15 @@ void main() {
         .then((stream) {
           stream.listen(
             (packet) {
-              print('Received packet: $packet');
+              Logger().info('Received packet: $packet');
             },
             onError: (Object error) {
-              print('Error receiving packet: $error');
+              Logger().error('Error receiving packet', Exception(error));
             },
           );
         })
         .catchError((Object error) {
-          print('Failed to start server: $error');
+          Logger().error('Failed to start server', Exception(error));
         }),
   );
 }

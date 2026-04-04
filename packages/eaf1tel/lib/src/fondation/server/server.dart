@@ -5,7 +5,7 @@ import 'package:udp/udp.dart';
 
 export 'domain/repository/ea_f1_stream_repository.dart';
 
-Future<Stream> startServerUseCase() async {
+Future<Stream<String>> startServerUseCase() async {
   try {
     final server = await UDP.bind(Endpoint.any(port: const Port(20777)));
     Logger().info('UDP server started on port 20777');

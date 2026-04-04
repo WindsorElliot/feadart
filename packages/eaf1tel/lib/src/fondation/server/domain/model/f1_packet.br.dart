@@ -1,23 +1,22 @@
 import 'dart:typed_data';
 
+import 'package:eaf1tel/src/fondation/server/domain/model/car_damage_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/car_motion_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/car_setup_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/car_status_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/car_telemetry_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/event_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/final_classification_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/lap_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/lobby_info_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/motion_ex_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/packet_header.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/participants_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/session_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/session_history_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/time_trial_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/tyre_sets_data.br.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'car_damage_data.br.dart';
-import 'car_motion_data.br.dart';
-import 'car_setup_data.br.dart';
-import 'car_status_data.br.dart';
-import 'car_telemetry_data.br.dart';
-import 'event_data.br.dart';
-import 'final_classification_data.br.dart';
-import 'lap_data.br.dart';
-import 'lobby_info_data.br.dart';
-import 'motion_ex_data.br.dart';
-import 'packet_header.br.dart';
-import 'participants_data.br.dart';
-import 'session_data.br.dart';
-import 'session_history_data.br.dart';
-import 'time_trial_data.br.dart';
-import 'tyre_sets_data.br.dart';
 
 part 'f1_packet.br.freezed.dart';
 

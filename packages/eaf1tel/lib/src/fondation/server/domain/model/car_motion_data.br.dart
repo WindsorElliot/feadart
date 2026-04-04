@@ -1,8 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:eaf1tel/src/fondation/server/domain/model/packet_header.br.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'packet_header.br.dart';
 
 part 'car_motion_data.br.freezed.dart';
 

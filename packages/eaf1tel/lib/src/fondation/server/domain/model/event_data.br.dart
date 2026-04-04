@@ -1,8 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:eaf1tel/src/fondation/server/domain/model/packet_header.br.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import 'packet_header.br.dart';
 
 part 'event_data.br.freezed.dart';
 
@@ -98,7 +97,7 @@ sealed class PacketEventData with _$PacketEventData {
       List.generate(4, (i) => data.getUint8(29 + i)),
     );
 
-    final EventDataDetails? eventDetails = switch (eventStringCode) {
+    final eventDetails = switch (eventStringCode) {
       'FTLP' => EventDataDetails.fastestLap(
         vehicleIdx: data.getUint8(33),
         lapTime: data.getFloat32(34, Endian.little),
@@ -142,7 +141,7 @@ sealed class PacketEventData with _$PacketEventData {
         flashbackFrameIdentifier: data.getUint32(33, Endian.little),
         flashbackSessionTime: data.getFloat32(37, Endian.little),
       ),
-      'BUTN' => EventDataDetails.buttons(
+      'BTN' => EventDataDetails.buttons(
         buttonStatus: data.getUint32(33, Endian.little),
       ),
       'OVTK' => EventDataDetails.overtake(

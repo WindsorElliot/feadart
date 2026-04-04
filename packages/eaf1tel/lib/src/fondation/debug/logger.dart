@@ -12,7 +12,7 @@ class Logger {
   final _logger = d_logger.Logger();
 
   void info(String message) {
-    _logger.i(message, time: DateTime.now(), error: null, stackTrace: null);
+    _logger.i(message, time: DateTime.now());
   }
 
   void log(String message) {
