@@ -1,1 +1,58 @@
 include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    [
+      "build/**",
+      "**/*.freezed.dart",
+      "**/*.g.dart",
+      "**/*.mocks.dart",
+      "**/*.tailor.dart",
+    ]
+  errors:
+    # Disabled for now, known Freezed issue
+    # https://github.com/rrousselGit/freezed/issues/488#issuecomment-894358980
+    # https://pub.dev/packages/freezed#disabling-invalid_annotation_target-warning-and-warning-in-generates-files
+    invalid_annotation_target: ignore
+    deprecated_member_use: ignore
+    deprecated_member_use_from_same_package: ignore
+
+  language:
+    # Ensures that dynamic type will not be implicitly casted.
+    strict-casts: true
+    # Ensures that dynamic type will not be used by default if type cannot be determined (i.e. during list initialization without type).
+    strict-inference: true
+    # Ensures that dynamic type will not be used by default if type cannot be determined due to omitted type arguments (i.e. when a generic type <T> is not specified).
+    strict-raw-types: true
+
+formatter:
+  page_width: 120
+  # Allows to preserve the trailing commas in the code when we want to keep it.
+  trailing_commas: preserve
+
+linter:
+  rules:
+    # Sometimes, we want to catch errors without specifying the exception type.
+    # avoid_catches_without_on_clauses: false
+    # Sometimes, it is more readable to provide redundant arguments even if it is not necessary.
+    # avoid_redundant_argument_values: false
+    # Sometimes, we want to call Futures without waiting for them (i.e. Navigating to a new screen in a callback)
+    # discarded_futures: false
+    # We consider that the documentation is not necessary for the ignoring statements.
+    # document_ignores: false
+    # We prefer using lines of 120 chars.
+    lines_longer_than_80_chars: false
+    # Sometimes, it is more readable to write the variable type even if it is not necessary.
+    # omit_local_variable_types: false
+    # We need to declare abstract classes with only one member.
+    # one_member_abstracts: false
+    # It would take to much time to write the public member api docs for all the classes.
+    public_member_api_docs: false
+    # We prefer to declare the class properties before the constructor.
+    sort_constructors_first: false
+    # Not necessary for now, but could be removed by specifying the type of the static public properties.
+    # specify_nonobvious_property_types: false
+    # Shows issues in tests files. Not necessary for now.
+    # unreachable_from_main: false
+    # Use DecoratedBox instead of Container for decoration as it is more lightweight.
+    use_decorated_box: true

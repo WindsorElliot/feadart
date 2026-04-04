@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
+  charset:
+    dependency: transitive
+    description:
+      name: charset
+      sha256: "27802032a581e01ac565904ece8c8962564b1070690794f0072f6865958ce8b9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   checked_yaml:
     dependency: transitive
     description:
@@ -395,6 +403,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      sha256: "25aee487596a6257655a1e091ec2ae66bc30e7af663592cc3a27e6591e05035c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.0"
   logging:
     dependency: transitive
     description:
@@ -420,7 +436,7 @@ packages:
     source: hosted
     version: "0.13.0"
   melos:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: melos
       sha256: "72942b70e2fad1f01b2d66b42696546f9f48f57c342bee61726c540e8bfdcb02"
@@ -728,6 +744,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
+  udp:
+    dependency: transitive
+    description:
+      name: udp
+      sha256: "50ea45d7ee80ad4c62de4ec0e8ed3ae65c36e9fe8cd0655a2bcd1503d2708e5a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.3"
   vector_math:
     dependency: transitive
     description:
