@@ -84,7 +84,7 @@ sealed class F1Packet with _$F1Packet {
 
   factory F1Packet.fromBytes(ByteData data) {
     final header = PacketHeader.fromBytes(data);
-    return switch (header.packetId) {
+    final event = switch (header.packetId) {
       0 => F1Packet.motion(data: PacketMotionData.fromBytes(data)),
       1 => F1Packet.session(data: PacketSessionData.fromBytes(data)),
       2 => F1Packet.lapData(data: PacketLapData.fromBytes(data)),
@@ -102,5 +102,6 @@ sealed class F1Packet with _$F1Packet {
       14 => F1Packet.timeTrial(data: PacketTimeTrialData.fromBytes(data)),
       _ => throw ArgumentError('Unknown packet ID: ${header.packetId}'),
     };
+    return event;
   }
 }

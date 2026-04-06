@@ -15,7 +15,6 @@ import 'package:eaf1tel/src/fondation/server/domain/model/participants_data.br.d
 import 'package:eaf1tel/src/fondation/server/domain/model/session_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/session_history_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/time_trial_data.br.dart';
-import 'package:eaf1tel/src/fondation/server/domain/model/tyre_sets_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/repository/ea_f1_stream_repository.dart';
 
 class EaF1SingleSourceRepository implements EaF1StreamRepository {
@@ -83,6 +82,6 @@ class EaF1SingleSourceRepository implements EaF1StreamRepository {
       packetStream.where((packet) => packet is PacketTimeTrialData).cast<PacketTimeTrialData>().distinct();
 
   @override
-  Stream<PacketTyreSetsData> get tyreSetsDataStream =>
-      packetStream.where((packet) => packet is PacketTyreSetsData).cast<PacketTyreSetsData>().distinct();
+  Stream<TyreSetsPacket> get tyreSetsDataStream =>
+      packetStream.where((packet) => packet is TyreSetsPacket).cast<TyreSetsPacket>().distinct();
 }

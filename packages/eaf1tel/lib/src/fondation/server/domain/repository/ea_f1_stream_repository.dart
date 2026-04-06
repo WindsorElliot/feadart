@@ -12,7 +12,6 @@ import 'package:eaf1tel/src/fondation/server/domain/model/participants_data.br.d
 import 'package:eaf1tel/src/fondation/server/domain/model/session_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/session_history_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/time_trial_data.br.dart';
-import 'package:eaf1tel/src/fondation/server/domain/model/tyre_sets_data.br.dart';
 
 abstract interface class EaF1StreamRepository {
   Stream<F1Packet> get packetStream;
@@ -39,7 +38,7 @@ abstract interface class EaF1StreamRepository {
 
   Stream<PacketSessionHistoryData> get sessionHistoryDataStream;
 
-  Stream<PacketTyreSetsData> get tyreSetsDataStream;
+  Stream<TyreSetsPacket> get tyreSetsDataStream;
 
   Stream<PacketMotionExData> get motionExDataStream;
 
