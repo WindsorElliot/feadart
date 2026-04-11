@@ -1,27 +1,25 @@
 import 'dart:async';
 
-import 'package:assets_dealer/assets_dealer.dart';
-import 'package:collection/collection.dart';
-import 'package:eaf1tel/eaf1tel.dart';
 import 'package:f1eadart/application.dart';
-import 'package:f1eadart/provider.br.dart';
+import 'package:f1eadart/feature/tyres_set/presentation/organisms/tyre_set_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:suzuka/suzuka.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   unawaited(Application().boot());
 }
 
-class MainApp extends ConsumerStatefulWidget {
-  const MainApp({super.key});
+// ignore: unreachable_from_main (since this is used for testing purposes only)
+class App extends ConsumerStatefulWidget {
+  // ignore: unreachable_from_main (since this is used for testing purposes only)
+  const App({super.key});
 
   @override
-  ConsumerState<MainApp> createState() => _MainAppState();
+  ConsumerState<App> createState() => _AppState();
 }
 
-class _MainAppState extends ConsumerState<MainApp> {
+class _AppState extends ConsumerState<App> {
   @override
   void initState() {
     super.initState();
@@ -29,39 +27,12 @@ class _MainAppState extends ConsumerState<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    final stream = ref.watch(eaF1StreamRepositoryProvider).tyreSetsDataStream;
+    // final stream = ref.watch(tyreSetsStreamStateProvider);
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: StreamBuilder<TyreSetsPacket>(
-            stream: stream.distinct(),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const CircularProgressIndicator();
-              } else if (snapshot.hasError) {
-                return Text('Error: ${snapshot.error}');
-              } else if (!snapshot.hasData) {
-                return const Text('No data available');
-              } else {
-                final data = snapshot.data!;
-                final tyreAssets = data.data.tyreSetData
-                    .map(
-                      (tyreSet) => switch (tyreSet.visualTyreCompound) {
-                        // 16 = soft, 17 = medium, 18 = hard, 7 = inter, 8 = wet
-                        16 => Assets.tyres.tyreRed,
-                        17 => Assets.tyres.tyreYellow,
-                        18 => Assets.tyres.tyreWhite,
-                        7 => Assets.tyres.tyreGreen,
-                        8 => Assets.tyres.tyreBlue,
-                        _ => throw Exception('Unknown visual tyre compound: ${tyreSet.visualTyreCompound}'),
-                      },
-                    )
-                    .sorted((a, b) => a.path.compareTo(b.path))
-                    .toList();
-                return SizedBox(height: 40, child: SessionTyreSetsWidget(tyreAssets: tyreAssets ?? []));
-              }
-            },
-          ),
+        body: Container(
+          alignment: Alignment.topLeft,
+          child: const TyreSetWidget(),
         ),
       ),
     );

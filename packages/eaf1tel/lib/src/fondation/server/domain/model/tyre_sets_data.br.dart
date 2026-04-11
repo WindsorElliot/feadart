@@ -5,17 +5,35 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'tyre_sets_data.br.freezed.dart';
 
+/// Data about a single tyre set.
 @freezed
 sealed class TyreSetData with _$TyreSetData {
   const factory TyreSetData({
+    /// Actual tyre compound used.
     required int actualTyreCompound,
+
+    /// Visual tyre compound used.
     required int visualTyreCompound,
+
+    /// Tyre wear (percentage).
     required int wear,
+
+    /// Whether this set is currently available.
     required int available,
+
+    /// Recommended session for tyre set, see appendix.
     required int recommendedSession,
+
+    /// Laps left in this tyre set.
     required int lifeSpan,
+
+    /// Max number of laps recommended for this compound.
     required int usableLife,
+
+    /// Lap delta time in milliseconds compared to fitted set.
     required int lapDeltaTime,
+
+    /// Whether the set is fitted or not.
     required int fitted,
   }) = _TyreSetData;
 
@@ -37,12 +55,23 @@ sealed class TyreSetData with _$TyreSetData {
   }
 }
 
+/// Packet containing tyre sets data for a specific car.
+///
+/// This packet gives details about the available tyre sets for each car
+/// in the session, including wear, availability, and recommendations.
 @freezed
 sealed class PacketTyreSetsData with _$PacketTyreSetsData {
   const factory PacketTyreSetsData({
+    /// The packet header.
     required PacketHeader header,
+
+    /// Index of the car this data relates to.
     required int carIdx,
+
+    /// List of tyre set data (20 sets).
     required List<TyreSetData> tyreSetData,
+
+    /// Index into the [tyreSetData] of the fitted tyre set.
     required int fittedIdx,
   }) = _PacketTyreSetsData;
 

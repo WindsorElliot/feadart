@@ -18,7 +18,7 @@ final class Application {
             EaF1SingleSourceRepository(dataSource: eaF1DataSOurce),
           ),
         ],
-        child: const MainApp(),
+        child: const App(),
       ),
     );
   }
