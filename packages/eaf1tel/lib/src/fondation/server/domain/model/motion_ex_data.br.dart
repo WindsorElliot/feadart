@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:eaf1tel/src/fondation/server/domain/model/game_year.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/packet_header.br.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -34,12 +35,23 @@ sealed class PacketMotionExData with _$PacketMotionExData {
     required double frontRollAngle,
     required double rearRollAngle,
     required double chassisYaw,
+    double? chassisPitch,
+    List<double>? wheelCamber,
+    List<double>? wheelCamberGain,
   }) = _PacketMotionExData;
 
-  /// Packet size in bytes.
+  /// Packet size in bytes (F1 2024).
   static const int size = 237;
 
-  factory PacketMotionExData.fromBytes(ByteData data) {
+  static int sizeForYear(GameYear year) => switch (year) {
+        GameYear.f2024 => 237,
+        GameYear.f2025 => 273,
+      };
+
+  factory PacketMotionExData.fromBytes(
+    ByteData data, {
+    required GameYear gameYear,
+  }) {
     final header = PacketHeader.fromBytes(data);
     return PacketMotionExData(
       header: header,
@@ -95,6 +107,17 @@ sealed class PacketMotionExData with _$PacketMotionExData {
       frontRollAngle: data.getFloat32(225, Endian.little),
       rearRollAngle: data.getFloat32(229, Endian.little),
       chassisYaw: data.getFloat32(233, Endian.little),
+      chassisPitch: gameYear == GameYear.f2025
+          ? data.getFloat32(237, Endian.little)
+          : null,
+      wheelCamber: gameYear == GameYear.f2025
+          ? List.generate(
+              4, (i) => data.getFloat32(241 + i * 4, Endian.little))
+          : null,
+      wheelCamberGain: gameYear == GameYear.f2025
+          ? List.generate(
+              4, (i) => data.getFloat32(257 + i * 4, Endian.little))
+          : null,
     );
   }
 }

@@ -6,6 +6,7 @@ import 'package:eaf1tel/src/fondation/server/domain/model/event_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/f1_packet.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/final_classification_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/lap_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/lap_positions_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/lobby_info_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/motion_ex_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/participants_data.br.dart';
@@ -43,4 +44,6 @@ abstract interface class EaF1StreamRepository {
   Stream<PacketMotionExData> get motionExDataStream;
 
   Stream<PacketTimeTrialData> get timeTrialDataStream;
+
+  Stream<PacketLapPositionsData> get lapPositionsDataStream;
 }

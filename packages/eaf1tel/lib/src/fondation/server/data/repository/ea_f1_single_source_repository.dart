@@ -9,6 +9,7 @@ import 'package:eaf1tel/src/fondation/server/domain/model/event_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/f1_packet.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/final_classification_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/lap_data.br.dart';
+import 'package:eaf1tel/src/fondation/server/domain/model/lap_positions_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/lobby_info_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/motion_ex_data.br.dart';
 import 'package:eaf1tel/src/fondation/server/domain/model/participants_data.br.dart';
@@ -28,60 +29,62 @@ class EaF1SingleSourceRepository implements EaF1StreamRepository {
       .distinct();
 
   @override
-  Stream<PacketCarDamageData> get carDamageDataStream =>
-      packetStream.where((packet) => packet is PacketCarDamageData).cast<PacketCarDamageData>().distinct();
-
-  @override
-  Stream<PacketCarSetupData> get carSetupDataStream =>
-      packetStream.where((packet) => packet is PacketCarSetupData).cast<PacketCarSetupData>().distinct();
-
-  @override
-  Stream<PacketCarStatusData> get carStatusDataStream =>
-      packetStream.where((packet) => packet is PacketCarStatusData).cast<PacketCarStatusData>().distinct();
-
-  @override
-  Stream<PacketCarTelemetryData> get carTelemetryDataStream =>
-      packetStream.where((packet) => packet is PacketCarTelemetryData).cast<PacketCarTelemetryData>().distinct();
-
-  @override
-  Stream<PacketEventData> get eventDataStream =>
-      packetStream.where((packet) => packet is PacketEventData).cast<PacketEventData>().distinct();
-
-  @override
-  Stream<PacketFinalClassificationData> get finalClassificationDataStream => packetStream
-      .where((packet) => packet is PacketFinalClassificationData)
-      .cast<PacketFinalClassificationData>()
-      .distinct();
+  Stream<PacketSessionData> get sessionDataStream =>
+      packetStream.where((p) => p is SessionPacket).cast<SessionPacket>().map((p) => p.data).distinct();
 
   @override
   Stream<PacketLapData> get lapDataStream =>
-      packetStream.where((packet) => packet is PacketLapData).cast<PacketLapData>().distinct();
+      packetStream.where((p) => p is LapDataPacket).cast<LapDataPacket>().map((p) => p.data).distinct();
 
   @override
-  Stream<PacketLobbyInfoData> get lobbyInfoDataStream =>
-      packetStream.where((packet) => packet is PacketLobbyInfoData).cast<PacketLobbyInfoData>().distinct();
-
-  @override
-  Stream<PacketMotionExData> get motionExDataStream =>
-      packetStream.where((packet) => packet is PacketMotionExData).cast<PacketMotionExData>().distinct();
+  Stream<PacketEventData> get eventDataStream =>
+      packetStream.where((p) => p is EventPacket).cast<EventPacket>().map((p) => p.data).distinct();
 
   @override
   Stream<PacketParticipantsData> get participantsDataStream =>
-      packetStream.where((packet) => packet is PacketParticipantsData).cast<PacketParticipantsData>().distinct();
+      packetStream.where((p) => p is ParticipantsPacket).cast<ParticipantsPacket>().map((p) => p.data).distinct();
 
   @override
-  Stream<PacketSessionData> get sessionDataStream =>
-      packetStream.where((packet) => packet is PacketSessionData).cast<PacketSessionData>().distinct();
+  Stream<PacketCarSetupData> get carSetupDataStream =>
+      packetStream.where((p) => p is CarSetupsPacket).cast<CarSetupsPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketCarTelemetryData> get carTelemetryDataStream =>
+      packetStream.where((p) => p is CarTelemetryPacket).cast<CarTelemetryPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketCarStatusData> get carStatusDataStream =>
+      packetStream.where((p) => p is CarStatusPacket).cast<CarStatusPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketFinalClassificationData> get finalClassificationDataStream =>
+      packetStream.where((p) => p is FinalClassificationPacket).cast<FinalClassificationPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketLobbyInfoData> get lobbyInfoDataStream =>
+      packetStream.where((p) => p is LobbyInfoPacket).cast<LobbyInfoPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketCarDamageData> get carDamageDataStream =>
+      packetStream.where((p) => p is CarDamagePacket).cast<CarDamagePacket>().map((p) => p.data).distinct();
 
   @override
   Stream<PacketSessionHistoryData> get sessionHistoryDataStream =>
-      packetStream.where((packet) => packet is PacketSessionHistoryData).cast<PacketSessionHistoryData>().distinct();
-
-  @override
-  Stream<PacketTimeTrialData> get timeTrialDataStream =>
-      packetStream.where((packet) => packet is PacketTimeTrialData).cast<PacketTimeTrialData>().distinct();
+      packetStream.where((p) => p is SessionHistoryPacket).cast<SessionHistoryPacket>().map((p) => p.data).distinct();
 
   @override
   Stream<TyreSetsPacket> get tyreSetsDataStream =>
-      packetStream.where((packet) => packet is TyreSetsPacket).cast<TyreSetsPacket>().distinct();
+      packetStream.where((p) => p is TyreSetsPacket).cast<TyreSetsPacket>().distinct();
+
+  @override
+  Stream<PacketMotionExData> get motionExDataStream =>
+      packetStream.where((p) => p is MotionExPacket).cast<MotionExPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketTimeTrialData> get timeTrialDataStream =>
+      packetStream.where((p) => p is TimeTrialPacket).cast<TimeTrialPacket>().map((p) => p.data).distinct();
+
+  @override
+  Stream<PacketLapPositionsData> get lapPositionsDataStream =>
+      packetStream.where((p) => p is LapPositionsPacket).cast<LapPositionsPacket>().map((p) => p.data).distinct();
 }

@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$FinalClassificationData {
 
- int get position; int get numLaps; int get gridPosition; int get points; int get numPitStops; int get resultStatus; int get bestLapTimeInMS; double get totalRaceTime; int get penaltiesTime; int get numPenalties; int get numTyreStints; List<int> get tyreStintsActual; List<int> get tyreStintsVisual; List<int> get tyreStintsEndLaps;
+ int get position; int get numLaps; int get gridPosition; int get points; int get numPitStops; int get resultStatus; int? get resultReason; int get bestLapTimeInMS; double get totalRaceTime; int get penaltiesTime; int get numPenalties; int get numTyreStints; List<int> get tyreStintsActual; List<int> get tyreStintsVisual; List<int> get tyreStintsEndLaps;
 /// Create a copy of FinalClassificationData
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $FinalClassificationDataCopyWith<FinalClassificationData> get copyWith => _$Fina
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is FinalClassificationData&&(identical(other.position, position) || other.position == position)&&(identical(other.numLaps, numLaps) || other.numLaps == numLaps)&&(identical(other.gridPosition, gridPosition) || other.gridPosition == gridPosition)&&(identical(other.points, points) || other.points == points)&&(identical(other.numPitStops, numPitStops) || other.numPitStops == numPitStops)&&(identical(other.resultStatus, resultStatus) || other.resultStatus == resultStatus)&&(identical(other.bestLapTimeInMS, bestLapTimeInMS) || other.bestLapTimeInMS == bestLapTimeInMS)&&(identical(other.totalRaceTime, totalRaceTime) || other.totalRaceTime == totalRaceTime)&&(identical(other.penaltiesTime, penaltiesTime) || other.penaltiesTime == penaltiesTime)&&(identical(other.numPenalties, numPenalties) || other.numPenalties == numPenalties)&&(identical(other.numTyreStints, numTyreStints) || other.numTyreStints == numTyreStints)&&const DeepCollectionEquality().equals(other.tyreStintsActual, tyreStintsActual)&&const DeepCollectionEquality().equals(other.tyreStintsVisual, tyreStintsVisual)&&const DeepCollectionEquality().equals(other.tyreStintsEndLaps, tyreStintsEndLaps));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is FinalClassificationData&&(identical(other.position, position) || other.position == position)&&(identical(other.numLaps, numLaps) || other.numLaps == numLaps)&&(identical(other.gridPosition, gridPosition) || other.gridPosition == gridPosition)&&(identical(other.points, points) || other.points == points)&&(identical(other.numPitStops, numPitStops) || other.numPitStops == numPitStops)&&(identical(other.resultStatus, resultStatus) || other.resultStatus == resultStatus)&&(identical(other.resultReason, resultReason) || other.resultReason == resultReason)&&(identical(other.bestLapTimeInMS, bestLapTimeInMS) || other.bestLapTimeInMS == bestLapTimeInMS)&&(identical(other.totalRaceTime, totalRaceTime) || other.totalRaceTime == totalRaceTime)&&(identical(other.penaltiesTime, penaltiesTime) || other.penaltiesTime == penaltiesTime)&&(identical(other.numPenalties, numPenalties) || other.numPenalties == numPenalties)&&(identical(other.numTyreStints, numTyreStints) || other.numTyreStints == numTyreStints)&&const DeepCollectionEquality().equals(other.tyreStintsActual, tyreStintsActual)&&const DeepCollectionEquality().equals(other.tyreStintsVisual, tyreStintsVisual)&&const DeepCollectionEquality().equals(other.tyreStintsEndLaps, tyreStintsEndLaps));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,position,numLaps,gridPosition,points,numPitStops,resultStatus,bestLapTimeInMS,totalRaceTime,penaltiesTime,numPenalties,numTyreStints,const DeepCollectionEquality().hash(tyreStintsActual),const DeepCollectionEquality().hash(tyreStintsVisual),const DeepCollectionEquality().hash(tyreStintsEndLaps));
+int get hashCode => Object.hash(runtimeType,position,numLaps,gridPosition,points,numPitStops,resultStatus,resultReason,bestLapTimeInMS,totalRaceTime,penaltiesTime,numPenalties,numTyreStints,const DeepCollectionEquality().hash(tyreStintsActual),const DeepCollectionEquality().hash(tyreStintsVisual),const DeepCollectionEquality().hash(tyreStintsEndLaps));
 
 @override
 String toString() {
-  return 'FinalClassificationData(position: $position, numLaps: $numLaps, gridPosition: $gridPosition, points: $points, numPitStops: $numPitStops, resultStatus: $resultStatus, bestLapTimeInMS: $bestLapTimeInMS, totalRaceTime: $totalRaceTime, penaltiesTime: $penaltiesTime, numPenalties: $numPenalties, numTyreStints: $numTyreStints, tyreStintsActual: $tyreStintsActual, tyreStintsVisual: $tyreStintsVisual, tyreStintsEndLaps: $tyreStintsEndLaps)';
+  return 'FinalClassificationData(position: $position, numLaps: $numLaps, gridPosition: $gridPosition, points: $points, numPitStops: $numPitStops, resultStatus: $resultStatus, resultReason: $resultReason, bestLapTimeInMS: $bestLapTimeInMS, totalRaceTime: $totalRaceTime, penaltiesTime: $penaltiesTime, numPenalties: $numPenalties, numTyreStints: $numTyreStints, tyreStintsActual: $tyreStintsActual, tyreStintsVisual: $tyreStintsVisual, tyreStintsEndLaps: $tyreStintsEndLaps)';
 }
 
 
@@ -45,7 +45,7 @@ abstract mixin class $FinalClassificationDataCopyWith<$Res>  {
   factory $FinalClassificationDataCopyWith(FinalClassificationData value, $Res Function(FinalClassificationData) _then) = _$FinalClassificationDataCopyWithImpl;
 @useResult
 $Res call({
- int position, int numLaps, int gridPosition, int points, int numPitStops, int resultStatus, int bestLapTimeInMS, double totalRaceTime, int penaltiesTime, int numPenalties, int numTyreStints, List<int> tyreStintsActual, List<int> tyreStintsVisual, List<int> tyreStintsEndLaps
+ int position, int numLaps, int gridPosition, int points, int numPitStops, int resultStatus, int? resultReason, int bestLapTimeInMS, double totalRaceTime, int penaltiesTime, int numPenalties, int numTyreStints, List<int> tyreStintsActual, List<int> tyreStintsVisual, List<int> tyreStintsEndLaps
 });
 
 
@@ -62,7 +62,7 @@ class _$FinalClassificationDataCopyWithImpl<$Res>
 
 /// Create a copy of FinalClassificationData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? position = null,Object? numLaps = null,Object? gridPosition = null,Object? points = null,Object? numPitStops = null,Object? resultStatus = null,Object? bestLapTimeInMS = null,Object? totalRaceTime = null,Object? penaltiesTime = null,Object? numPenalties = null,Object? numTyreStints = null,Object? tyreStintsActual = null,Object? tyreStintsVisual = null,Object? tyreStintsEndLaps = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? position = null,Object? numLaps = null,Object? gridPosition = null,Object? points = null,Object? numPitStops = null,Object? resultStatus = null,Object? resultReason = freezed,Object? bestLapTimeInMS = null,Object? totalRaceTime = null,Object? penaltiesTime = null,Object? numPenalties = null,Object? numTyreStints = null,Object? tyreStintsActual = null,Object? tyreStintsVisual = null,Object? tyreStintsEndLaps = null,}) {
   return _then(_self.copyWith(
 position: null == position ? _self.position : position // ignore: cast_nullable_to_non_nullable
 as int,numLaps: null == numLaps ? _self.numLaps : numLaps // ignore: cast_nullable_to_non_nullable
@@ -70,7 +70,8 @@ as int,gridPosition: null == gridPosition ? _self.gridPosition : gridPosition //
 as int,points: null == points ? _self.points : points // ignore: cast_nullable_to_non_nullable
 as int,numPitStops: null == numPitStops ? _self.numPitStops : numPitStops // ignore: cast_nullable_to_non_nullable
 as int,resultStatus: null == resultStatus ? _self.resultStatus : resultStatus // ignore: cast_nullable_to_non_nullable
-as int,bestLapTimeInMS: null == bestLapTimeInMS ? _self.bestLapTimeInMS : bestLapTimeInMS // ignore: cast_nullable_to_non_nullable
+as int,resultReason: freezed == resultReason ? _self.resultReason : resultReason // ignore: cast_nullable_to_non_nullable
+as int?,bestLapTimeInMS: null == bestLapTimeInMS ? _self.bestLapTimeInMS : bestLapTimeInMS // ignore: cast_nullable_to_non_nullable
 as int,totalRaceTime: null == totalRaceTime ? _self.totalRaceTime : totalRaceTime // ignore: cast_nullable_to_non_nullable
 as double,penaltiesTime: null == penaltiesTime ? _self.penaltiesTime : penaltiesTime // ignore: cast_nullable_to_non_nullable
 as int,numPenalties: null == numPenalties ? _self.numPenalties : numPenalties // ignore: cast_nullable_to_non_nullable
@@ -160,10 +161,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int? resultReason,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _FinalClassificationData() when $default != null:
-return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);case _:
+return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.resultReason,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);case _:
   return orElse();
 
 }
@@ -181,10 +182,10 @@ return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int? resultReason,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)  $default,) {final _that = this;
 switch (_that) {
 case _FinalClassificationData():
-return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);}
+return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.resultReason,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -198,10 +199,10 @@ return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int position,  int numLaps,  int gridPosition,  int points,  int numPitStops,  int resultStatus,  int? resultReason,  int bestLapTimeInMS,  double totalRaceTime,  int penaltiesTime,  int numPenalties,  int numTyreStints,  List<int> tyreStintsActual,  List<int> tyreStintsVisual,  List<int> tyreStintsEndLaps)?  $default,) {final _that = this;
 switch (_that) {
 case _FinalClassificationData() when $default != null:
-return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);case _:
+return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_that.numPitStops,_that.resultStatus,_that.resultReason,_that.bestLapTimeInMS,_that.totalRaceTime,_that.penaltiesTime,_that.numPenalties,_that.numTyreStints,_that.tyreStintsActual,_that.tyreStintsVisual,_that.tyreStintsEndLaps);case _:
   return null;
 
 }
@@ -213,7 +214,7 @@ return $default(_that.position,_that.numLaps,_that.gridPosition,_that.points,_th
 
 
 class _FinalClassificationData implements FinalClassificationData {
-  const _FinalClassificationData({required this.position, required this.numLaps, required this.gridPosition, required this.points, required this.numPitStops, required this.resultStatus, required this.bestLapTimeInMS, required this.totalRaceTime, required this.penaltiesTime, required this.numPenalties, required this.numTyreStints, required final  List<int> tyreStintsActual, required final  List<int> tyreStintsVisual, required final  List<int> tyreStintsEndLaps}): _tyreStintsActual = tyreStintsActual,_tyreStintsVisual = tyreStintsVisual,_tyreStintsEndLaps = tyreStintsEndLaps;
+  const _FinalClassificationData({required this.position, required this.numLaps, required this.gridPosition, required this.points, required this.numPitStops, required this.resultStatus, this.resultReason, required this.bestLapTimeInMS, required this.totalRaceTime, required this.penaltiesTime, required this.numPenalties, required this.numTyreStints, required final  List<int> tyreStintsActual, required final  List<int> tyreStintsVisual, required final  List<int> tyreStintsEndLaps}): _tyreStintsActual = tyreStintsActual,_tyreStintsVisual = tyreStintsVisual,_tyreStintsEndLaps = tyreStintsEndLaps;
   
 
 @override final  int position;
@@ -222,6 +223,7 @@ class _FinalClassificationData implements FinalClassificationData {
 @override final  int points;
 @override final  int numPitStops;
 @override final  int resultStatus;
+@override final  int? resultReason;
 @override final  int bestLapTimeInMS;
 @override final  double totalRaceTime;
 @override final  int penaltiesTime;
@@ -259,16 +261,16 @@ _$FinalClassificationDataCopyWith<_FinalClassificationData> get copyWith => __$F
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FinalClassificationData&&(identical(other.position, position) || other.position == position)&&(identical(other.numLaps, numLaps) || other.numLaps == numLaps)&&(identical(other.gridPosition, gridPosition) || other.gridPosition == gridPosition)&&(identical(other.points, points) || other.points == points)&&(identical(other.numPitStops, numPitStops) || other.numPitStops == numPitStops)&&(identical(other.resultStatus, resultStatus) || other.resultStatus == resultStatus)&&(identical(other.bestLapTimeInMS, bestLapTimeInMS) || other.bestLapTimeInMS == bestLapTimeInMS)&&(identical(other.totalRaceTime, totalRaceTime) || other.totalRaceTime == totalRaceTime)&&(identical(other.penaltiesTime, penaltiesTime) || other.penaltiesTime == penaltiesTime)&&(identical(other.numPenalties, numPenalties) || other.numPenalties == numPenalties)&&(identical(other.numTyreStints, numTyreStints) || other.numTyreStints == numTyreStints)&&const DeepCollectionEquality().equals(other._tyreStintsActual, _tyreStintsActual)&&const DeepCollectionEquality().equals(other._tyreStintsVisual, _tyreStintsVisual)&&const DeepCollectionEquality().equals(other._tyreStintsEndLaps, _tyreStintsEndLaps));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _FinalClassificationData&&(identical(other.position, position) || other.position == position)&&(identical(other.numLaps, numLaps) || other.numLaps == numLaps)&&(identical(other.gridPosition, gridPosition) || other.gridPosition == gridPosition)&&(identical(other.points, points) || other.points == points)&&(identical(other.numPitStops, numPitStops) || other.numPitStops == numPitStops)&&(identical(other.resultStatus, resultStatus) || other.resultStatus == resultStatus)&&(identical(other.resultReason, resultReason) || other.resultReason == resultReason)&&(identical(other.bestLapTimeInMS, bestLapTimeInMS) || other.bestLapTimeInMS == bestLapTimeInMS)&&(identical(other.totalRaceTime, totalRaceTime) || other.totalRaceTime == totalRaceTime)&&(identical(other.penaltiesTime, penaltiesTime) || other.penaltiesTime == penaltiesTime)&&(identical(other.numPenalties, numPenalties) || other.numPenalties == numPenalties)&&(identical(other.numTyreStints, numTyreStints) || other.numTyreStints == numTyreStints)&&const DeepCollectionEquality().equals(other._tyreStintsActual, _tyreStintsActual)&&const DeepCollectionEquality().equals(other._tyreStintsVisual, _tyreStintsVisual)&&const DeepCollectionEquality().equals(other._tyreStintsEndLaps, _tyreStintsEndLaps));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,position,numLaps,gridPosition,points,numPitStops,resultStatus,bestLapTimeInMS,totalRaceTime,penaltiesTime,numPenalties,numTyreStints,const DeepCollectionEquality().hash(_tyreStintsActual),const DeepCollectionEquality().hash(_tyreStintsVisual),const DeepCollectionEquality().hash(_tyreStintsEndLaps));
+int get hashCode => Object.hash(runtimeType,position,numLaps,gridPosition,points,numPitStops,resultStatus,resultReason,bestLapTimeInMS,totalRaceTime,penaltiesTime,numPenalties,numTyreStints,const DeepCollectionEquality().hash(_tyreStintsActual),const DeepCollectionEquality().hash(_tyreStintsVisual),const DeepCollectionEquality().hash(_tyreStintsEndLaps));
 
 @override
 String toString() {
-  return 'FinalClassificationData(position: $position, numLaps: $numLaps, gridPosition: $gridPosition, points: $points, numPitStops: $numPitStops, resultStatus: $resultStatus, bestLapTimeInMS: $bestLapTimeInMS, totalRaceTime: $totalRaceTime, penaltiesTime: $penaltiesTime, numPenalties: $numPenalties, numTyreStints: $numTyreStints, tyreStintsActual: $tyreStintsActual, tyreStintsVisual: $tyreStintsVisual, tyreStintsEndLaps: $tyreStintsEndLaps)';
+  return 'FinalClassificationData(position: $position, numLaps: $numLaps, gridPosition: $gridPosition, points: $points, numPitStops: $numPitStops, resultStatus: $resultStatus, resultReason: $resultReason, bestLapTimeInMS: $bestLapTimeInMS, totalRaceTime: $totalRaceTime, penaltiesTime: $penaltiesTime, numPenalties: $numPenalties, numTyreStints: $numTyreStints, tyreStintsActual: $tyreStintsActual, tyreStintsVisual: $tyreStintsVisual, tyreStintsEndLaps: $tyreStintsEndLaps)';
 }
 
 
@@ -279,7 +281,7 @@ abstract mixin class _$FinalClassificationDataCopyWith<$Res> implements $FinalCl
   factory _$FinalClassificationDataCopyWith(_FinalClassificationData value, $Res Function(_FinalClassificationData) _then) = __$FinalClassificationDataCopyWithImpl;
 @override @useResult
 $Res call({
- int position, int numLaps, int gridPosition, int points, int numPitStops, int resultStatus, int bestLapTimeInMS, double totalRaceTime, int penaltiesTime, int numPenalties, int numTyreStints, List<int> tyreStintsActual, List<int> tyreStintsVisual, List<int> tyreStintsEndLaps
+ int position, int numLaps, int gridPosition, int points, int numPitStops, int resultStatus, int? resultReason, int bestLapTimeInMS, double totalRaceTime, int penaltiesTime, int numPenalties, int numTyreStints, List<int> tyreStintsActual, List<int> tyreStintsVisual, List<int> tyreStintsEndLaps
 });
 
 
@@ -296,7 +298,7 @@ class __$FinalClassificationDataCopyWithImpl<$Res>
 
 /// Create a copy of FinalClassificationData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? position = null,Object? numLaps = null,Object? gridPosition = null,Object? points = null,Object? numPitStops = null,Object? resultStatus = null,Object? bestLapTimeInMS = null,Object? totalRaceTime = null,Object? penaltiesTime = null,Object? numPenalties = null,Object? numTyreStints = null,Object? tyreStintsActual = null,Object? tyreStintsVisual = null,Object? tyreStintsEndLaps = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? position = null,Object? numLaps = null,Object? gridPosition = null,Object? points = null,Object? numPitStops = null,Object? resultStatus = null,Object? resultReason = freezed,Object? bestLapTimeInMS = null,Object? totalRaceTime = null,Object? penaltiesTime = null,Object? numPenalties = null,Object? numTyreStints = null,Object? tyreStintsActual = null,Object? tyreStintsVisual = null,Object? tyreStintsEndLaps = null,}) {
   return _then(_FinalClassificationData(
 position: null == position ? _self.position : position // ignore: cast_nullable_to_non_nullable
 as int,numLaps: null == numLaps ? _self.numLaps : numLaps // ignore: cast_nullable_to_non_nullable
@@ -304,7 +306,8 @@ as int,gridPosition: null == gridPosition ? _self.gridPosition : gridPosition //
 as int,points: null == points ? _self.points : points // ignore: cast_nullable_to_non_nullable
 as int,numPitStops: null == numPitStops ? _self.numPitStops : numPitStops // ignore: cast_nullable_to_non_nullable
 as int,resultStatus: null == resultStatus ? _self.resultStatus : resultStatus // ignore: cast_nullable_to_non_nullable
-as int,bestLapTimeInMS: null == bestLapTimeInMS ? _self.bestLapTimeInMS : bestLapTimeInMS // ignore: cast_nullable_to_non_nullable
+as int,resultReason: freezed == resultReason ? _self.resultReason : resultReason // ignore: cast_nullable_to_non_nullable
+as int?,bestLapTimeInMS: null == bestLapTimeInMS ? _self.bestLapTimeInMS : bestLapTimeInMS // ignore: cast_nullable_to_non_nullable
 as int,totalRaceTime: null == totalRaceTime ? _self.totalRaceTime : totalRaceTime // ignore: cast_nullable_to_non_nullable
 as double,penaltiesTime: null == penaltiesTime ? _self.penaltiesTime : penaltiesTime // ignore: cast_nullable_to_non_nullable
 as int,numPenalties: null == numPenalties ? _self.numPenalties : numPenalties // ignore: cast_nullable_to_non_nullable

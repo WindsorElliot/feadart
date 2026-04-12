@@ -14,7 +14,16 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$TyreSetData {
 
- int get actualTyreCompound; int get visualTyreCompound; int get wear; int get available; int get recommendedSession; int get lifeSpan; int get usableLife; int get lapDeltaTime; int get fitted;
+/// Actual tyre compound used.
+ int get actualTyreCompound;/// Visual tyre compound used.
+ int get visualTyreCompound;/// Tyre wear (percentage).
+ int get wear;/// Whether this set is currently available.
+ int get available;/// Recommended session for tyre set, see appendix.
+ int get recommendedSession;/// Laps left in this tyre set.
+ int get lifeSpan;/// Max number of laps recommended for this compound.
+ int get usableLife;/// Lap delta time in milliseconds compared to fitted set.
+ int get lapDeltaTime;/// Whether the set is fitted or not.
+ int get fitted;
 /// Create a copy of TyreSetData
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -211,14 +220,23 @@ class _TyreSetData implements TyreSetData {
   const _TyreSetData({required this.actualTyreCompound, required this.visualTyreCompound, required this.wear, required this.available, required this.recommendedSession, required this.lifeSpan, required this.usableLife, required this.lapDeltaTime, required this.fitted});
   
 
+/// Actual tyre compound used.
 @override final  int actualTyreCompound;
+/// Visual tyre compound used.
 @override final  int visualTyreCompound;
+/// Tyre wear (percentage).
 @override final  int wear;
+/// Whether this set is currently available.
 @override final  int available;
+/// Recommended session for tyre set, see appendix.
 @override final  int recommendedSession;
+/// Laps left in this tyre set.
 @override final  int lifeSpan;
+/// Max number of laps recommended for this compound.
 @override final  int usableLife;
+/// Lap delta time in milliseconds compared to fitted set.
 @override final  int lapDeltaTime;
+/// Whether the set is fitted or not.
 @override final  int fitted;
 
 /// Create a copy of TyreSetData
@@ -289,7 +307,11 @@ as int,
 /// @nodoc
 mixin _$PacketTyreSetsData {
 
- PacketHeader get header; int get carIdx; List<TyreSetData> get tyreSetData; int get fittedIdx;
+/// The packet header.
+ PacketHeader get header;/// Index of the car this data relates to.
+ int get carIdx;/// List of tyre set data (20 sets).
+ List<TyreSetData> get tyreSetData;/// Index into the [tyreSetData] of the fitted tyre set.
+ int get fittedIdx;
 /// Create a copy of PacketTyreSetsData
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -490,15 +512,20 @@ class _PacketTyreSetsData implements PacketTyreSetsData {
   const _PacketTyreSetsData({required this.header, required this.carIdx, required final  List<TyreSetData> tyreSetData, required this.fittedIdx}): _tyreSetData = tyreSetData;
   
 
+/// The packet header.
 @override final  PacketHeader header;
+/// Index of the car this data relates to.
 @override final  int carIdx;
+/// List of tyre set data (20 sets).
  final  List<TyreSetData> _tyreSetData;
+/// List of tyre set data (20 sets).
 @override List<TyreSetData> get tyreSetData {
   if (_tyreSetData is EqualUnmodifiableListView) return _tyreSetData;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_tyreSetData);
 }
 
+/// Index into the [tyreSetData] of the fitted tyre set.
 @override final  int fittedIdx;
 
 /// Create a copy of PacketTyreSetsData

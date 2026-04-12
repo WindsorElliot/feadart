@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CarDamageData {
 
- List<double> get tyresWear; List<int> get tyresDamage; List<int> get brakesDamage; int get frontLeftWingDamage; int get frontRightWingDamage; int get rearWingDamage; int get floorDamage; int get diffuserDamage; int get sidepodDamage; int get drsFault; int get ersFault; int get gearBoxDamage; int get engineDamage; int get engineMGUHWear; int get engineESWear; int get engineCEWear; int get engineICEWear; int get engineMGUKWear; int get engineTCWear; int get engineBlown; int get engineSeized;
+ List<double> get tyresWear; List<int> get tyresDamage; List<int> get brakesDamage; List<int>? get tyreBlisters; int get frontLeftWingDamage; int get frontRightWingDamage; int get rearWingDamage; int get floorDamage; int get diffuserDamage; int get sidepodDamage; int get drsFault; int get ersFault; int get gearBoxDamage; int get engineDamage; int get engineMGUHWear; int get engineESWear; int get engineCEWear; int get engineICEWear; int get engineMGUKWear; int get engineTCWear; int get engineBlown; int get engineSeized;
 /// Create a copy of CarDamageData
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $CarDamageDataCopyWith<CarDamageData> get copyWith => _$CarDamageDataCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CarDamageData&&const DeepCollectionEquality().equals(other.tyresWear, tyresWear)&&const DeepCollectionEquality().equals(other.tyresDamage, tyresDamage)&&const DeepCollectionEquality().equals(other.brakesDamage, brakesDamage)&&(identical(other.frontLeftWingDamage, frontLeftWingDamage) || other.frontLeftWingDamage == frontLeftWingDamage)&&(identical(other.frontRightWingDamage, frontRightWingDamage) || other.frontRightWingDamage == frontRightWingDamage)&&(identical(other.rearWingDamage, rearWingDamage) || other.rearWingDamage == rearWingDamage)&&(identical(other.floorDamage, floorDamage) || other.floorDamage == floorDamage)&&(identical(other.diffuserDamage, diffuserDamage) || other.diffuserDamage == diffuserDamage)&&(identical(other.sidepodDamage, sidepodDamage) || other.sidepodDamage == sidepodDamage)&&(identical(other.drsFault, drsFault) || other.drsFault == drsFault)&&(identical(other.ersFault, ersFault) || other.ersFault == ersFault)&&(identical(other.gearBoxDamage, gearBoxDamage) || other.gearBoxDamage == gearBoxDamage)&&(identical(other.engineDamage, engineDamage) || other.engineDamage == engineDamage)&&(identical(other.engineMGUHWear, engineMGUHWear) || other.engineMGUHWear == engineMGUHWear)&&(identical(other.engineESWear, engineESWear) || other.engineESWear == engineESWear)&&(identical(other.engineCEWear, engineCEWear) || other.engineCEWear == engineCEWear)&&(identical(other.engineICEWear, engineICEWear) || other.engineICEWear == engineICEWear)&&(identical(other.engineMGUKWear, engineMGUKWear) || other.engineMGUKWear == engineMGUKWear)&&(identical(other.engineTCWear, engineTCWear) || other.engineTCWear == engineTCWear)&&(identical(other.engineBlown, engineBlown) || other.engineBlown == engineBlown)&&(identical(other.engineSeized, engineSeized) || other.engineSeized == engineSeized));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CarDamageData&&const DeepCollectionEquality().equals(other.tyresWear, tyresWear)&&const DeepCollectionEquality().equals(other.tyresDamage, tyresDamage)&&const DeepCollectionEquality().equals(other.brakesDamage, brakesDamage)&&const DeepCollectionEquality().equals(other.tyreBlisters, tyreBlisters)&&(identical(other.frontLeftWingDamage, frontLeftWingDamage) || other.frontLeftWingDamage == frontLeftWingDamage)&&(identical(other.frontRightWingDamage, frontRightWingDamage) || other.frontRightWingDamage == frontRightWingDamage)&&(identical(other.rearWingDamage, rearWingDamage) || other.rearWingDamage == rearWingDamage)&&(identical(other.floorDamage, floorDamage) || other.floorDamage == floorDamage)&&(identical(other.diffuserDamage, diffuserDamage) || other.diffuserDamage == diffuserDamage)&&(identical(other.sidepodDamage, sidepodDamage) || other.sidepodDamage == sidepodDamage)&&(identical(other.drsFault, drsFault) || other.drsFault == drsFault)&&(identical(other.ersFault, ersFault) || other.ersFault == ersFault)&&(identical(other.gearBoxDamage, gearBoxDamage) || other.gearBoxDamage == gearBoxDamage)&&(identical(other.engineDamage, engineDamage) || other.engineDamage == engineDamage)&&(identical(other.engineMGUHWear, engineMGUHWear) || other.engineMGUHWear == engineMGUHWear)&&(identical(other.engineESWear, engineESWear) || other.engineESWear == engineESWear)&&(identical(other.engineCEWear, engineCEWear) || other.engineCEWear == engineCEWear)&&(identical(other.engineICEWear, engineICEWear) || other.engineICEWear == engineICEWear)&&(identical(other.engineMGUKWear, engineMGUKWear) || other.engineMGUKWear == engineMGUKWear)&&(identical(other.engineTCWear, engineTCWear) || other.engineTCWear == engineTCWear)&&(identical(other.engineBlown, engineBlown) || other.engineBlown == engineBlown)&&(identical(other.engineSeized, engineSeized) || other.engineSeized == engineSeized));
 }
 
 
 @override
-int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(tyresWear),const DeepCollectionEquality().hash(tyresDamage),const DeepCollectionEquality().hash(brakesDamage),frontLeftWingDamage,frontRightWingDamage,rearWingDamage,floorDamage,diffuserDamage,sidepodDamage,drsFault,ersFault,gearBoxDamage,engineDamage,engineMGUHWear,engineESWear,engineCEWear,engineICEWear,engineMGUKWear,engineTCWear,engineBlown,engineSeized]);
+int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(tyresWear),const DeepCollectionEquality().hash(tyresDamage),const DeepCollectionEquality().hash(brakesDamage),const DeepCollectionEquality().hash(tyreBlisters),frontLeftWingDamage,frontRightWingDamage,rearWingDamage,floorDamage,diffuserDamage,sidepodDamage,drsFault,ersFault,gearBoxDamage,engineDamage,engineMGUHWear,engineESWear,engineCEWear,engineICEWear,engineMGUKWear,engineTCWear,engineBlown,engineSeized]);
 
 @override
 String toString() {
-  return 'CarDamageData(tyresWear: $tyresWear, tyresDamage: $tyresDamage, brakesDamage: $brakesDamage, frontLeftWingDamage: $frontLeftWingDamage, frontRightWingDamage: $frontRightWingDamage, rearWingDamage: $rearWingDamage, floorDamage: $floorDamage, diffuserDamage: $diffuserDamage, sidepodDamage: $sidepodDamage, drsFault: $drsFault, ersFault: $ersFault, gearBoxDamage: $gearBoxDamage, engineDamage: $engineDamage, engineMGUHWear: $engineMGUHWear, engineESWear: $engineESWear, engineCEWear: $engineCEWear, engineICEWear: $engineICEWear, engineMGUKWear: $engineMGUKWear, engineTCWear: $engineTCWear, engineBlown: $engineBlown, engineSeized: $engineSeized)';
+  return 'CarDamageData(tyresWear: $tyresWear, tyresDamage: $tyresDamage, brakesDamage: $brakesDamage, tyreBlisters: $tyreBlisters, frontLeftWingDamage: $frontLeftWingDamage, frontRightWingDamage: $frontRightWingDamage, rearWingDamage: $rearWingDamage, floorDamage: $floorDamage, diffuserDamage: $diffuserDamage, sidepodDamage: $sidepodDamage, drsFault: $drsFault, ersFault: $ersFault, gearBoxDamage: $gearBoxDamage, engineDamage: $engineDamage, engineMGUHWear: $engineMGUHWear, engineESWear: $engineESWear, engineCEWear: $engineCEWear, engineICEWear: $engineICEWear, engineMGUKWear: $engineMGUKWear, engineTCWear: $engineTCWear, engineBlown: $engineBlown, engineSeized: $engineSeized)';
 }
 
 
@@ -45,7 +45,7 @@ abstract mixin class $CarDamageDataCopyWith<$Res>  {
   factory $CarDamageDataCopyWith(CarDamageData value, $Res Function(CarDamageData) _then) = _$CarDamageDataCopyWithImpl;
 @useResult
 $Res call({
- List<double> tyresWear, List<int> tyresDamage, List<int> brakesDamage, int frontLeftWingDamage, int frontRightWingDamage, int rearWingDamage, int floorDamage, int diffuserDamage, int sidepodDamage, int drsFault, int ersFault, int gearBoxDamage, int engineDamage, int engineMGUHWear, int engineESWear, int engineCEWear, int engineICEWear, int engineMGUKWear, int engineTCWear, int engineBlown, int engineSeized
+ List<double> tyresWear, List<int> tyresDamage, List<int> brakesDamage, List<int>? tyreBlisters, int frontLeftWingDamage, int frontRightWingDamage, int rearWingDamage, int floorDamage, int diffuserDamage, int sidepodDamage, int drsFault, int ersFault, int gearBoxDamage, int engineDamage, int engineMGUHWear, int engineESWear, int engineCEWear, int engineICEWear, int engineMGUKWear, int engineTCWear, int engineBlown, int engineSeized
 });
 
 
@@ -62,12 +62,13 @@ class _$CarDamageDataCopyWithImpl<$Res>
 
 /// Create a copy of CarDamageData
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? tyresWear = null,Object? tyresDamage = null,Object? brakesDamage = null,Object? frontLeftWingDamage = null,Object? frontRightWingDamage = null,Object? rearWingDamage = null,Object? floorDamage = null,Object? diffuserDamage = null,Object? sidepodDamage = null,Object? drsFault = null,Object? ersFault = null,Object? gearBoxDamage = null,Object? engineDamage = null,Object? engineMGUHWear = null,Object? engineESWear = null,Object? engineCEWear = null,Object? engineICEWear = null,Object? engineMGUKWear = null,Object? engineTCWear = null,Object? engineBlown = null,Object? engineSeized = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? tyresWear = null,Object? tyresDamage = null,Object? brakesDamage = null,Object? tyreBlisters = freezed,Object? frontLeftWingDamage = null,Object? frontRightWingDamage = null,Object? rearWingDamage = null,Object? floorDamage = null,Object? diffuserDamage = null,Object? sidepodDamage = null,Object? drsFault = null,Object? ersFault = null,Object? gearBoxDamage = null,Object? engineDamage = null,Object? engineMGUHWear = null,Object? engineESWear = null,Object? engineCEWear = null,Object? engineICEWear = null,Object? engineMGUKWear = null,Object? engineTCWear = null,Object? engineBlown = null,Object? engineSeized = null,}) {
   return _then(_self.copyWith(
 tyresWear: null == tyresWear ? _self.tyresWear : tyresWear // ignore: cast_nullable_to_non_nullable
 as List<double>,tyresDamage: null == tyresDamage ? _self.tyresDamage : tyresDamage // ignore: cast_nullable_to_non_nullable
 as List<int>,brakesDamage: null == brakesDamage ? _self.brakesDamage : brakesDamage // ignore: cast_nullable_to_non_nullable
-as List<int>,frontLeftWingDamage: null == frontLeftWingDamage ? _self.frontLeftWingDamage : frontLeftWingDamage // ignore: cast_nullable_to_non_nullable
+as List<int>,tyreBlisters: freezed == tyreBlisters ? _self.tyreBlisters : tyreBlisters // ignore: cast_nullable_to_non_nullable
+as List<int>?,frontLeftWingDamage: null == frontLeftWingDamage ? _self.frontLeftWingDamage : frontLeftWingDamage // ignore: cast_nullable_to_non_nullable
 as int,frontRightWingDamage: null == frontRightWingDamage ? _self.frontRightWingDamage : frontRightWingDamage // ignore: cast_nullable_to_non_nullable
 as int,rearWingDamage: null == rearWingDamage ? _self.rearWingDamage : rearWingDamage // ignore: cast_nullable_to_non_nullable
 as int,floorDamage: null == floorDamage ? _self.floorDamage : floorDamage // ignore: cast_nullable_to_non_nullable
@@ -167,10 +168,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  List<int>? tyreBlisters,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _CarDamageData() when $default != null:
-return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);case _:
+return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.tyreBlisters,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);case _:
   return orElse();
 
 }
@@ -188,10 +189,10 @@ return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.front
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  List<int>? tyreBlisters,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)  $default,) {final _that = this;
 switch (_that) {
 case _CarDamageData():
-return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);}
+return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.tyreBlisters,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -205,10 +206,10 @@ return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.front
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<double> tyresWear,  List<int> tyresDamage,  List<int> brakesDamage,  List<int>? tyreBlisters,  int frontLeftWingDamage,  int frontRightWingDamage,  int rearWingDamage,  int floorDamage,  int diffuserDamage,  int sidepodDamage,  int drsFault,  int ersFault,  int gearBoxDamage,  int engineDamage,  int engineMGUHWear,  int engineESWear,  int engineCEWear,  int engineICEWear,  int engineMGUKWear,  int engineTCWear,  int engineBlown,  int engineSeized)?  $default,) {final _that = this;
 switch (_that) {
 case _CarDamageData() when $default != null:
-return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);case _:
+return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.tyreBlisters,_that.frontLeftWingDamage,_that.frontRightWingDamage,_that.rearWingDamage,_that.floorDamage,_that.diffuserDamage,_that.sidepodDamage,_that.drsFault,_that.ersFault,_that.gearBoxDamage,_that.engineDamage,_that.engineMGUHWear,_that.engineESWear,_that.engineCEWear,_that.engineICEWear,_that.engineMGUKWear,_that.engineTCWear,_that.engineBlown,_that.engineSeized);case _:
   return null;
 
 }
@@ -220,7 +221,7 @@ return $default(_that.tyresWear,_that.tyresDamage,_that.brakesDamage,_that.front
 
 
 class _CarDamageData implements CarDamageData {
-  const _CarDamageData({required final  List<double> tyresWear, required final  List<int> tyresDamage, required final  List<int> brakesDamage, required this.frontLeftWingDamage, required this.frontRightWingDamage, required this.rearWingDamage, required this.floorDamage, required this.diffuserDamage, required this.sidepodDamage, required this.drsFault, required this.ersFault, required this.gearBoxDamage, required this.engineDamage, required this.engineMGUHWear, required this.engineESWear, required this.engineCEWear, required this.engineICEWear, required this.engineMGUKWear, required this.engineTCWear, required this.engineBlown, required this.engineSeized}): _tyresWear = tyresWear,_tyresDamage = tyresDamage,_brakesDamage = brakesDamage;
+  const _CarDamageData({required final  List<double> tyresWear, required final  List<int> tyresDamage, required final  List<int> brakesDamage, final  List<int>? tyreBlisters, required this.frontLeftWingDamage, required this.frontRightWingDamage, required this.rearWingDamage, required this.floorDamage, required this.diffuserDamage, required this.sidepodDamage, required this.drsFault, required this.ersFault, required this.gearBoxDamage, required this.engineDamage, required this.engineMGUHWear, required this.engineESWear, required this.engineCEWear, required this.engineICEWear, required this.engineMGUKWear, required this.engineTCWear, required this.engineBlown, required this.engineSeized}): _tyresWear = tyresWear,_tyresDamage = tyresDamage,_brakesDamage = brakesDamage,_tyreBlisters = tyreBlisters;
   
 
  final  List<double> _tyresWear;
@@ -242,6 +243,15 @@ class _CarDamageData implements CarDamageData {
   if (_brakesDamage is EqualUnmodifiableListView) return _brakesDamage;
   // ignore: implicit_dynamic_type
   return EqualUnmodifiableListView(_brakesDamage);
+}
+
+ final  List<int>? _tyreBlisters;
+@override List<int>? get tyreBlisters {
+  final value = _tyreBlisters;
+  if (value == null) return null;
+  if (_tyreBlisters is EqualUnmodifiableListView) return _tyreBlisters;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
 @override final  int frontLeftWingDamage;
@@ -273,16 +283,16 @@ _$CarDamageDataCopyWith<_CarDamageData> get copyWith => __$CarDamageDataCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CarDamageData&&const DeepCollectionEquality().equals(other._tyresWear, _tyresWear)&&const DeepCollectionEquality().equals(other._tyresDamage, _tyresDamage)&&const DeepCollectionEquality().equals(other._brakesDamage, _brakesDamage)&&(identical(other.frontLeftWingDamage, frontLeftWingDamage) || other.frontLeftWingDamage == frontLeftWingDamage)&&(identical(other.frontRightWingDamage, frontRightWingDamage) || other.frontRightWingDamage == frontRightWingDamage)&&(identical(other.rearWingDamage, rearWingDamage) || other.rearWingDamage == rearWingDamage)&&(identical(other.floorDamage, floorDamage) || other.floorDamage == floorDamage)&&(identical(other.diffuserDamage, diffuserDamage) || other.diffuserDamage == diffuserDamage)&&(identical(other.sidepodDamage, sidepodDamage) || other.sidepodDamage == sidepodDamage)&&(identical(other.drsFault, drsFault) || other.drsFault == drsFault)&&(identical(other.ersFault, ersFault) || other.ersFault == ersFault)&&(identical(other.gearBoxDamage, gearBoxDamage) || other.gearBoxDamage == gearBoxDamage)&&(identical(other.engineDamage, engineDamage) || other.engineDamage == engineDamage)&&(identical(other.engineMGUHWear, engineMGUHWear) || other.engineMGUHWear == engineMGUHWear)&&(identical(other.engineESWear, engineESWear) || other.engineESWear == engineESWear)&&(identical(other.engineCEWear, engineCEWear) || other.engineCEWear == engineCEWear)&&(identical(other.engineICEWear, engineICEWear) || other.engineICEWear == engineICEWear)&&(identical(other.engineMGUKWear, engineMGUKWear) || other.engineMGUKWear == engineMGUKWear)&&(identical(other.engineTCWear, engineTCWear) || other.engineTCWear == engineTCWear)&&(identical(other.engineBlown, engineBlown) || other.engineBlown == engineBlown)&&(identical(other.engineSeized, engineSeized) || other.engineSeized == engineSeized));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CarDamageData&&const DeepCollectionEquality().equals(other._tyresWear, _tyresWear)&&const DeepCollectionEquality().equals(other._tyresDamage, _tyresDamage)&&const DeepCollectionEquality().equals(other._brakesDamage, _brakesDamage)&&const DeepCollectionEquality().equals(other._tyreBlisters, _tyreBlisters)&&(identical(other.frontLeftWingDamage, frontLeftWingDamage) || other.frontLeftWingDamage == frontLeftWingDamage)&&(identical(other.frontRightWingDamage, frontRightWingDamage) || other.frontRightWingDamage == frontRightWingDamage)&&(identical(other.rearWingDamage, rearWingDamage) || other.rearWingDamage == rearWingDamage)&&(identical(other.floorDamage, floorDamage) || other.floorDamage == floorDamage)&&(identical(other.diffuserDamage, diffuserDamage) || other.diffuserDamage == diffuserDamage)&&(identical(other.sidepodDamage, sidepodDamage) || other.sidepodDamage == sidepodDamage)&&(identical(other.drsFault, drsFault) || other.drsFault == drsFault)&&(identical(other.ersFault, ersFault) || other.ersFault == ersFault)&&(identical(other.gearBoxDamage, gearBoxDamage) || other.gearBoxDamage == gearBoxDamage)&&(identical(other.engineDamage, engineDamage) || other.engineDamage == engineDamage)&&(identical(other.engineMGUHWear, engineMGUHWear) || other.engineMGUHWear == engineMGUHWear)&&(identical(other.engineESWear, engineESWear) || other.engineESWear == engineESWear)&&(identical(other.engineCEWear, engineCEWear) || other.engineCEWear == engineCEWear)&&(identical(other.engineICEWear, engineICEWear) || other.engineICEWear == engineICEWear)&&(identical(other.engineMGUKWear, engineMGUKWear) || other.engineMGUKWear == engineMGUKWear)&&(identical(other.engineTCWear, engineTCWear) || other.engineTCWear == engineTCWear)&&(identical(other.engineBlown, engineBlown) || other.engineBlown == engineBlown)&&(identical(other.engineSeized, engineSeized) || other.engineSeized == engineSeized));
 }
 
 
 @override
-int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(_tyresWear),const DeepCollectionEquality().hash(_tyresDamage),const DeepCollectionEquality().hash(_brakesDamage),frontLeftWingDamage,frontRightWingDamage,rearWingDamage,floorDamage,diffuserDamage,sidepodDamage,drsFault,ersFault,gearBoxDamage,engineDamage,engineMGUHWear,engineESWear,engineCEWear,engineICEWear,engineMGUKWear,engineTCWear,engineBlown,engineSeized]);
+int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(_tyresWear),const DeepCollectionEquality().hash(_tyresDamage),const DeepCollectionEquality().hash(_brakesDamage),const DeepCollectionEquality().hash(_tyreBlisters),frontLeftWingDamage,frontRightWingDamage,rearWingDamage,floorDamage,diffuserDamage,sidepodDamage,drsFault,ersFault,gearBoxDamage,engineDamage,engineMGUHWear,engineESWear,engineCEWear,engineICEWear,engineMGUKWear,engineTCWear,engineBlown,engineSeized]);
 
 @override
 String toString() {
-  return 'CarDamageData(tyresWear: $tyresWear, tyresDamage: $tyresDamage, brakesDamage: $brakesDamage, frontLeftWingDamage: $frontLeftWingDamage, frontRightWingDamage: $frontRightWingDamage, rearWingDamage: $rearWingDamage, floorDamage: $floorDamage, diffuserDamage: $diffuserDamage, sidepodDamage: $sidepodDamage, drsFault: $drsFault, ersFault: $ersFault, gearBoxDamage: $gearBoxDamage, engineDamage: $engineDamage, engineMGUHWear: $engineMGUHWear, engineESWear: $engineESWear, engineCEWear: $engineCEWear, engineICEWear: $engineICEWear, engineMGUKWear: $engineMGUKWear, engineTCWear: $engineTCWear, engineBlown: $engineBlown, engineSeized: $engineSeized)';
+  return 'CarDamageData(tyresWear: $tyresWear, tyresDamage: $tyresDamage, brakesDamage: $brakesDamage, tyreBlisters: $tyreBlisters, frontLeftWingDamage: $frontLeftWingDamage, frontRightWingDamage: $frontRightWingDamage, rearWingDamage: $rearWingDamage, floorDamage: $floorDamage, diffuserDamage: $diffuserDamage, sidepodDamage: $sidepodDamage, drsFault: $drsFault, ersFault: $ersFault, gearBoxDamage: $gearBoxDamage, engineDamage: $engineDamage, engineMGUHWear: $engineMGUHWear, engineESWear: $engineESWear, engineCEWear: $engineCEWear, engineICEWear: $engineICEWear, engineMGUKWear: $engineMGUKWear, engineTCWear: $engineTCWear, engineBlown: $engineBlown, engineSeized: $engineSeized)';
 }
 
 
@@ -293,7 +303,7 @@ abstract mixin class _$CarDamageDataCopyWith<$Res> implements $CarDamageDataCopy
   factory _$CarDamageDataCopyWith(_CarDamageData value, $Res Function(_CarDamageData) _then) = __$CarDamageDataCopyWithImpl;
 @override @useResult
 $Res call({
- List<double> tyresWear, List<int> tyresDamage, List<int> brakesDamage, int frontLeftWingDamage, int frontRightWingDamage, int rearWingDamage, int floorDamage, int diffuserDamage, int sidepodDamage, int drsFault, int ersFault, int gearBoxDamage, int engineDamage, int engineMGUHWear, int engineESWear, int engineCEWear, int engineICEWear, int engineMGUKWear, int engineTCWear, int engineBlown, int engineSeized
+ List<double> tyresWear, List<int> tyresDamage, List<int> brakesDamage, List<int>? tyreBlisters, int frontLeftWingDamage, int frontRightWingDamage, int rearWingDamage, int floorDamage, int diffuserDamage, int sidepodDamage, int drsFault, int ersFault, int gearBoxDamage, int engineDamage, int engineMGUHWear, int engineESWear, int engineCEWear, int engineICEWear, int engineMGUKWear, int engineTCWear, int engineBlown, int engineSeized
 });
 
 
@@ -310,12 +320,13 @@ class __$CarDamageDataCopyWithImpl<$Res>
 
 /// Create a copy of CarDamageData
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tyresWear = null,Object? tyresDamage = null,Object? brakesDamage = null,Object? frontLeftWingDamage = null,Object? frontRightWingDamage = null,Object? rearWingDamage = null,Object? floorDamage = null,Object? diffuserDamage = null,Object? sidepodDamage = null,Object? drsFault = null,Object? ersFault = null,Object? gearBoxDamage = null,Object? engineDamage = null,Object? engineMGUHWear = null,Object? engineESWear = null,Object? engineCEWear = null,Object? engineICEWear = null,Object? engineMGUKWear = null,Object? engineTCWear = null,Object? engineBlown = null,Object? engineSeized = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? tyresWear = null,Object? tyresDamage = null,Object? brakesDamage = null,Object? tyreBlisters = freezed,Object? frontLeftWingDamage = null,Object? frontRightWingDamage = null,Object? rearWingDamage = null,Object? floorDamage = null,Object? diffuserDamage = null,Object? sidepodDamage = null,Object? drsFault = null,Object? ersFault = null,Object? gearBoxDamage = null,Object? engineDamage = null,Object? engineMGUHWear = null,Object? engineESWear = null,Object? engineCEWear = null,Object? engineICEWear = null,Object? engineMGUKWear = null,Object? engineTCWear = null,Object? engineBlown = null,Object? engineSeized = null,}) {
   return _then(_CarDamageData(
 tyresWear: null == tyresWear ? _self._tyresWear : tyresWear // ignore: cast_nullable_to_non_nullable
 as List<double>,tyresDamage: null == tyresDamage ? _self._tyresDamage : tyresDamage // ignore: cast_nullable_to_non_nullable
 as List<int>,brakesDamage: null == brakesDamage ? _self._brakesDamage : brakesDamage // ignore: cast_nullable_to_non_nullable
-as List<int>,frontLeftWingDamage: null == frontLeftWingDamage ? _self.frontLeftWingDamage : frontLeftWingDamage // ignore: cast_nullable_to_non_nullable
+as List<int>,tyreBlisters: freezed == tyreBlisters ? _self._tyreBlisters : tyreBlisters // ignore: cast_nullable_to_non_nullable
+as List<int>?,frontLeftWingDamage: null == frontLeftWingDamage ? _self.frontLeftWingDamage : frontLeftWingDamage // ignore: cast_nullable_to_non_nullable
 as int,frontRightWingDamage: null == frontRightWingDamage ? _self.frontRightWingDamage : frontRightWingDamage // ignore: cast_nullable_to_non_nullable
 as int,rearWingDamage: null == rearWingDamage ? _self.rearWingDamage : rearWingDamage // ignore: cast_nullable_to_non_nullable
 as int,floorDamage: null == floorDamage ? _self.floorDamage : floorDamage // ignore: cast_nullable_to_non_nullable

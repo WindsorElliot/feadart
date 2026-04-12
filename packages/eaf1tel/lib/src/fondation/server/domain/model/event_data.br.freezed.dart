@@ -55,12 +55,13 @@ extension EventDataDetailsPatterns on EventDataDetails {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( FastestLapEvent value)?  fastestLap,TResult Function( RetirementEvent value)?  retirement,TResult Function( TeamMateInPitsEvent value)?  teamMateInPits,TResult Function( RaceWinnerEvent value)?  raceWinner,TResult Function( PenaltyEvent value)?  penalty,TResult Function( SpeedTrapEvent value)?  speedTrap,TResult Function( StartLightsEvent value)?  startLights,TResult Function( DriveThroughPenaltyServedEvent value)?  driveThroughPenaltyServed,TResult Function( StopGoPenaltyServedEvent value)?  stopGoPenaltyServed,TResult Function( FlashbackEvent value)?  flashback,TResult Function( ButtonsEvent value)?  buttons,TResult Function( OvertakeEvent value)?  overtake,TResult Function( SafetyCarEvent value)?  safetyCar,TResult Function( CollisionEvent value)?  collision,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( FastestLapEvent value)?  fastestLap,TResult Function( RetirementEvent value)?  retirement,TResult Function( DRSDisabledEvent value)?  drsDisabled,TResult Function( TeamMateInPitsEvent value)?  teamMateInPits,TResult Function( RaceWinnerEvent value)?  raceWinner,TResult Function( PenaltyEvent value)?  penalty,TResult Function( SpeedTrapEvent value)?  speedTrap,TResult Function( StartLightsEvent value)?  startLights,TResult Function( DriveThroughPenaltyServedEvent value)?  driveThroughPenaltyServed,TResult Function( StopGoPenaltyServedEvent value)?  stopGoPenaltyServed,TResult Function( FlashbackEvent value)?  flashback,TResult Function( ButtonsEvent value)?  buttons,TResult Function( RedFlagEvent value)?  redFlag,TResult Function( OvertakeEvent value)?  overtake,TResult Function( SafetyCarEvent value)?  safetyCar,TResult Function( CollisionEvent value)?  collision,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case FastestLapEvent() when fastestLap != null:
 return fastestLap(_that);case RetirementEvent() when retirement != null:
-return retirement(_that);case TeamMateInPitsEvent() when teamMateInPits != null:
+return retirement(_that);case DRSDisabledEvent() when drsDisabled != null:
+return drsDisabled(_that);case TeamMateInPitsEvent() when teamMateInPits != null:
 return teamMateInPits(_that);case RaceWinnerEvent() when raceWinner != null:
 return raceWinner(_that);case PenaltyEvent() when penalty != null:
 return penalty(_that);case SpeedTrapEvent() when speedTrap != null:
@@ -69,7 +70,8 @@ return startLights(_that);case DriveThroughPenaltyServedEvent() when driveThroug
 return driveThroughPenaltyServed(_that);case StopGoPenaltyServedEvent() when stopGoPenaltyServed != null:
 return stopGoPenaltyServed(_that);case FlashbackEvent() when flashback != null:
 return flashback(_that);case ButtonsEvent() when buttons != null:
-return buttons(_that);case OvertakeEvent() when overtake != null:
+return buttons(_that);case RedFlagEvent() when redFlag != null:
+return redFlag(_that);case OvertakeEvent() when overtake != null:
 return overtake(_that);case SafetyCarEvent() when safetyCar != null:
 return safetyCar(_that);case CollisionEvent() when collision != null:
 return collision(_that);case _:
@@ -90,12 +92,13 @@ return collision(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( FastestLapEvent value)  fastestLap,required TResult Function( RetirementEvent value)  retirement,required TResult Function( TeamMateInPitsEvent value)  teamMateInPits,required TResult Function( RaceWinnerEvent value)  raceWinner,required TResult Function( PenaltyEvent value)  penalty,required TResult Function( SpeedTrapEvent value)  speedTrap,required TResult Function( StartLightsEvent value)  startLights,required TResult Function( DriveThroughPenaltyServedEvent value)  driveThroughPenaltyServed,required TResult Function( StopGoPenaltyServedEvent value)  stopGoPenaltyServed,required TResult Function( FlashbackEvent value)  flashback,required TResult Function( ButtonsEvent value)  buttons,required TResult Function( OvertakeEvent value)  overtake,required TResult Function( SafetyCarEvent value)  safetyCar,required TResult Function( CollisionEvent value)  collision,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( FastestLapEvent value)  fastestLap,required TResult Function( RetirementEvent value)  retirement,required TResult Function( DRSDisabledEvent value)  drsDisabled,required TResult Function( TeamMateInPitsEvent value)  teamMateInPits,required TResult Function( RaceWinnerEvent value)  raceWinner,required TResult Function( PenaltyEvent value)  penalty,required TResult Function( SpeedTrapEvent value)  speedTrap,required TResult Function( StartLightsEvent value)  startLights,required TResult Function( DriveThroughPenaltyServedEvent value)  driveThroughPenaltyServed,required TResult Function( StopGoPenaltyServedEvent value)  stopGoPenaltyServed,required TResult Function( FlashbackEvent value)  flashback,required TResult Function( ButtonsEvent value)  buttons,required TResult Function( RedFlagEvent value)  redFlag,required TResult Function( OvertakeEvent value)  overtake,required TResult Function( SafetyCarEvent value)  safetyCar,required TResult Function( CollisionEvent value)  collision,}){
 final _that = this;
 switch (_that) {
 case FastestLapEvent():
 return fastestLap(_that);case RetirementEvent():
-return retirement(_that);case TeamMateInPitsEvent():
+return retirement(_that);case DRSDisabledEvent():
+return drsDisabled(_that);case TeamMateInPitsEvent():
 return teamMateInPits(_that);case RaceWinnerEvent():
 return raceWinner(_that);case PenaltyEvent():
 return penalty(_that);case SpeedTrapEvent():
@@ -104,7 +107,8 @@ return startLights(_that);case DriveThroughPenaltyServedEvent():
 return driveThroughPenaltyServed(_that);case StopGoPenaltyServedEvent():
 return stopGoPenaltyServed(_that);case FlashbackEvent():
 return flashback(_that);case ButtonsEvent():
-return buttons(_that);case OvertakeEvent():
+return buttons(_that);case RedFlagEvent():
+return redFlag(_that);case OvertakeEvent():
 return overtake(_that);case SafetyCarEvent():
 return safetyCar(_that);case CollisionEvent():
 return collision(_that);}
@@ -121,12 +125,13 @@ return collision(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( FastestLapEvent value)?  fastestLap,TResult? Function( RetirementEvent value)?  retirement,TResult? Function( TeamMateInPitsEvent value)?  teamMateInPits,TResult? Function( RaceWinnerEvent value)?  raceWinner,TResult? Function( PenaltyEvent value)?  penalty,TResult? Function( SpeedTrapEvent value)?  speedTrap,TResult? Function( StartLightsEvent value)?  startLights,TResult? Function( DriveThroughPenaltyServedEvent value)?  driveThroughPenaltyServed,TResult? Function( StopGoPenaltyServedEvent value)?  stopGoPenaltyServed,TResult? Function( FlashbackEvent value)?  flashback,TResult? Function( ButtonsEvent value)?  buttons,TResult? Function( OvertakeEvent value)?  overtake,TResult? Function( SafetyCarEvent value)?  safetyCar,TResult? Function( CollisionEvent value)?  collision,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( FastestLapEvent value)?  fastestLap,TResult? Function( RetirementEvent value)?  retirement,TResult? Function( DRSDisabledEvent value)?  drsDisabled,TResult? Function( TeamMateInPitsEvent value)?  teamMateInPits,TResult? Function( RaceWinnerEvent value)?  raceWinner,TResult? Function( PenaltyEvent value)?  penalty,TResult? Function( SpeedTrapEvent value)?  speedTrap,TResult? Function( StartLightsEvent value)?  startLights,TResult? Function( DriveThroughPenaltyServedEvent value)?  driveThroughPenaltyServed,TResult? Function( StopGoPenaltyServedEvent value)?  stopGoPenaltyServed,TResult? Function( FlashbackEvent value)?  flashback,TResult? Function( ButtonsEvent value)?  buttons,TResult? Function( RedFlagEvent value)?  redFlag,TResult? Function( OvertakeEvent value)?  overtake,TResult? Function( SafetyCarEvent value)?  safetyCar,TResult? Function( CollisionEvent value)?  collision,}){
 final _that = this;
 switch (_that) {
 case FastestLapEvent() when fastestLap != null:
 return fastestLap(_that);case RetirementEvent() when retirement != null:
-return retirement(_that);case TeamMateInPitsEvent() when teamMateInPits != null:
+return retirement(_that);case DRSDisabledEvent() when drsDisabled != null:
+return drsDisabled(_that);case TeamMateInPitsEvent() when teamMateInPits != null:
 return teamMateInPits(_that);case RaceWinnerEvent() when raceWinner != null:
 return raceWinner(_that);case PenaltyEvent() when penalty != null:
 return penalty(_that);case SpeedTrapEvent() when speedTrap != null:
@@ -135,7 +140,8 @@ return startLights(_that);case DriveThroughPenaltyServedEvent() when driveThroug
 return driveThroughPenaltyServed(_that);case StopGoPenaltyServedEvent() when stopGoPenaltyServed != null:
 return stopGoPenaltyServed(_that);case FlashbackEvent() when flashback != null:
 return flashback(_that);case ButtonsEvent() when buttons != null:
-return buttons(_that);case OvertakeEvent() when overtake != null:
+return buttons(_that);case RedFlagEvent() when redFlag != null:
+return redFlag(_that);case OvertakeEvent() when overtake != null:
 return overtake(_that);case SafetyCarEvent() when safetyCar != null:
 return safetyCar(_that);case CollisionEvent() when collision != null:
 return collision(_that);case _:
@@ -155,20 +161,22 @@ return collision(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( int vehicleIdx,  double lapTime)?  fastestLap,TResult Function( int vehicleIdx)?  retirement,TResult Function( int vehicleIdx)?  teamMateInPits,TResult Function( int vehicleIdx)?  raceWinner,TResult Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)?  penalty,TResult Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)?  speedTrap,TResult Function( int numLights)?  startLights,TResult Function( int vehicleIdx)?  driveThroughPenaltyServed,TResult Function( int vehicleIdx)?  stopGoPenaltyServed,TResult Function( int flashbackFrameIdentifier,  double flashbackSessionTime)?  flashback,TResult Function( int buttonStatus)?  buttons,TResult Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)?  overtake,TResult Function( int safetyCarType,  int eventType)?  safetyCar,TResult Function( int vehicle1Idx,  int vehicle2Idx)?  collision,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( int vehicleIdx,  double lapTime)?  fastestLap,TResult Function( int vehicleIdx,  int? reason)?  retirement,TResult Function( int? reason)?  drsDisabled,TResult Function( int vehicleIdx)?  teamMateInPits,TResult Function( int vehicleIdx)?  raceWinner,TResult Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)?  penalty,TResult Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)?  speedTrap,TResult Function( int numLights)?  startLights,TResult Function( int vehicleIdx)?  driveThroughPenaltyServed,TResult Function( int vehicleIdx,  double? stopTime)?  stopGoPenaltyServed,TResult Function( int flashbackFrameIdentifier,  double flashbackSessionTime)?  flashback,TResult Function( int buttonStatus)?  buttons,TResult Function()?  redFlag,TResult Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)?  overtake,TResult Function( int safetyCarType,  int eventType)?  safetyCar,TResult Function( int vehicle1Idx,  int vehicle2Idx)?  collision,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case FastestLapEvent() when fastestLap != null:
 return fastestLap(_that.vehicleIdx,_that.lapTime);case RetirementEvent() when retirement != null:
-return retirement(_that.vehicleIdx);case TeamMateInPitsEvent() when teamMateInPits != null:
+return retirement(_that.vehicleIdx,_that.reason);case DRSDisabledEvent() when drsDisabled != null:
+return drsDisabled(_that.reason);case TeamMateInPitsEvent() when teamMateInPits != null:
 return teamMateInPits(_that.vehicleIdx);case RaceWinnerEvent() when raceWinner != null:
 return raceWinner(_that.vehicleIdx);case PenaltyEvent() when penalty != null:
 return penalty(_that.penaltyType,_that.infringementType,_that.vehicleIdx,_that.otherVehicleIdx,_that.time,_that.lapNum,_that.placesGained);case SpeedTrapEvent() when speedTrap != null:
 return speedTrap(_that.vehicleIdx,_that.speed,_that.isOverallFastestInSession,_that.isDriverFastestInSession,_that.fastestVehicleIdxInSession,_that.fastestSpeedInSession);case StartLightsEvent() when startLights != null:
 return startLights(_that.numLights);case DriveThroughPenaltyServedEvent() when driveThroughPenaltyServed != null:
 return driveThroughPenaltyServed(_that.vehicleIdx);case StopGoPenaltyServedEvent() when stopGoPenaltyServed != null:
-return stopGoPenaltyServed(_that.vehicleIdx);case FlashbackEvent() when flashback != null:
+return stopGoPenaltyServed(_that.vehicleIdx,_that.stopTime);case FlashbackEvent() when flashback != null:
 return flashback(_that.flashbackFrameIdentifier,_that.flashbackSessionTime);case ButtonsEvent() when buttons != null:
-return buttons(_that.buttonStatus);case OvertakeEvent() when overtake != null:
+return buttons(_that.buttonStatus);case RedFlagEvent() when redFlag != null:
+return redFlag();case OvertakeEvent() when overtake != null:
 return overtake(_that.overtakingVehicleIdx,_that.beingOvertakenVehicleIdx);case SafetyCarEvent() when safetyCar != null:
 return safetyCar(_that.safetyCarType,_that.eventType);case CollisionEvent() when collision != null:
 return collision(_that.vehicle1Idx,_that.vehicle2Idx);case _:
@@ -189,20 +197,22 @@ return collision(_that.vehicle1Idx,_that.vehicle2Idx);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( int vehicleIdx,  double lapTime)  fastestLap,required TResult Function( int vehicleIdx)  retirement,required TResult Function( int vehicleIdx)  teamMateInPits,required TResult Function( int vehicleIdx)  raceWinner,required TResult Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)  penalty,required TResult Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)  speedTrap,required TResult Function( int numLights)  startLights,required TResult Function( int vehicleIdx)  driveThroughPenaltyServed,required TResult Function( int vehicleIdx)  stopGoPenaltyServed,required TResult Function( int flashbackFrameIdentifier,  double flashbackSessionTime)  flashback,required TResult Function( int buttonStatus)  buttons,required TResult Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)  overtake,required TResult Function( int safetyCarType,  int eventType)  safetyCar,required TResult Function( int vehicle1Idx,  int vehicle2Idx)  collision,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( int vehicleIdx,  double lapTime)  fastestLap,required TResult Function( int vehicleIdx,  int? reason)  retirement,required TResult Function( int? reason)  drsDisabled,required TResult Function( int vehicleIdx)  teamMateInPits,required TResult Function( int vehicleIdx)  raceWinner,required TResult Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)  penalty,required TResult Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)  speedTrap,required TResult Function( int numLights)  startLights,required TResult Function( int vehicleIdx)  driveThroughPenaltyServed,required TResult Function( int vehicleIdx,  double? stopTime)  stopGoPenaltyServed,required TResult Function( int flashbackFrameIdentifier,  double flashbackSessionTime)  flashback,required TResult Function( int buttonStatus)  buttons,required TResult Function()  redFlag,required TResult Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)  overtake,required TResult Function( int safetyCarType,  int eventType)  safetyCar,required TResult Function( int vehicle1Idx,  int vehicle2Idx)  collision,}) {final _that = this;
 switch (_that) {
 case FastestLapEvent():
 return fastestLap(_that.vehicleIdx,_that.lapTime);case RetirementEvent():
-return retirement(_that.vehicleIdx);case TeamMateInPitsEvent():
+return retirement(_that.vehicleIdx,_that.reason);case DRSDisabledEvent():
+return drsDisabled(_that.reason);case TeamMateInPitsEvent():
 return teamMateInPits(_that.vehicleIdx);case RaceWinnerEvent():
 return raceWinner(_that.vehicleIdx);case PenaltyEvent():
 return penalty(_that.penaltyType,_that.infringementType,_that.vehicleIdx,_that.otherVehicleIdx,_that.time,_that.lapNum,_that.placesGained);case SpeedTrapEvent():
 return speedTrap(_that.vehicleIdx,_that.speed,_that.isOverallFastestInSession,_that.isDriverFastestInSession,_that.fastestVehicleIdxInSession,_that.fastestSpeedInSession);case StartLightsEvent():
 return startLights(_that.numLights);case DriveThroughPenaltyServedEvent():
 return driveThroughPenaltyServed(_that.vehicleIdx);case StopGoPenaltyServedEvent():
-return stopGoPenaltyServed(_that.vehicleIdx);case FlashbackEvent():
+return stopGoPenaltyServed(_that.vehicleIdx,_that.stopTime);case FlashbackEvent():
 return flashback(_that.flashbackFrameIdentifier,_that.flashbackSessionTime);case ButtonsEvent():
-return buttons(_that.buttonStatus);case OvertakeEvent():
+return buttons(_that.buttonStatus);case RedFlagEvent():
+return redFlag();case OvertakeEvent():
 return overtake(_that.overtakingVehicleIdx,_that.beingOvertakenVehicleIdx);case SafetyCarEvent():
 return safetyCar(_that.safetyCarType,_that.eventType);case CollisionEvent():
 return collision(_that.vehicle1Idx,_that.vehicle2Idx);}
@@ -219,20 +229,22 @@ return collision(_that.vehicle1Idx,_that.vehicle2Idx);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( int vehicleIdx,  double lapTime)?  fastestLap,TResult? Function( int vehicleIdx)?  retirement,TResult? Function( int vehicleIdx)?  teamMateInPits,TResult? Function( int vehicleIdx)?  raceWinner,TResult? Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)?  penalty,TResult? Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)?  speedTrap,TResult? Function( int numLights)?  startLights,TResult? Function( int vehicleIdx)?  driveThroughPenaltyServed,TResult? Function( int vehicleIdx)?  stopGoPenaltyServed,TResult? Function( int flashbackFrameIdentifier,  double flashbackSessionTime)?  flashback,TResult? Function( int buttonStatus)?  buttons,TResult? Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)?  overtake,TResult? Function( int safetyCarType,  int eventType)?  safetyCar,TResult? Function( int vehicle1Idx,  int vehicle2Idx)?  collision,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( int vehicleIdx,  double lapTime)?  fastestLap,TResult? Function( int vehicleIdx,  int? reason)?  retirement,TResult? Function( int? reason)?  drsDisabled,TResult? Function( int vehicleIdx)?  teamMateInPits,TResult? Function( int vehicleIdx)?  raceWinner,TResult? Function( int penaltyType,  int infringementType,  int vehicleIdx,  int otherVehicleIdx,  int time,  int lapNum,  int placesGained)?  penalty,TResult? Function( int vehicleIdx,  double speed,  int isOverallFastestInSession,  int isDriverFastestInSession,  int fastestVehicleIdxInSession,  double fastestSpeedInSession)?  speedTrap,TResult? Function( int numLights)?  startLights,TResult? Function( int vehicleIdx)?  driveThroughPenaltyServed,TResult? Function( int vehicleIdx,  double? stopTime)?  stopGoPenaltyServed,TResult? Function( int flashbackFrameIdentifier,  double flashbackSessionTime)?  flashback,TResult? Function( int buttonStatus)?  buttons,TResult? Function()?  redFlag,TResult? Function( int overtakingVehicleIdx,  int beingOvertakenVehicleIdx)?  overtake,TResult? Function( int safetyCarType,  int eventType)?  safetyCar,TResult? Function( int vehicle1Idx,  int vehicle2Idx)?  collision,}) {final _that = this;
 switch (_that) {
 case FastestLapEvent() when fastestLap != null:
 return fastestLap(_that.vehicleIdx,_that.lapTime);case RetirementEvent() when retirement != null:
-return retirement(_that.vehicleIdx);case TeamMateInPitsEvent() when teamMateInPits != null:
+return retirement(_that.vehicleIdx,_that.reason);case DRSDisabledEvent() when drsDisabled != null:
+return drsDisabled(_that.reason);case TeamMateInPitsEvent() when teamMateInPits != null:
 return teamMateInPits(_that.vehicleIdx);case RaceWinnerEvent() when raceWinner != null:
 return raceWinner(_that.vehicleIdx);case PenaltyEvent() when penalty != null:
 return penalty(_that.penaltyType,_that.infringementType,_that.vehicleIdx,_that.otherVehicleIdx,_that.time,_that.lapNum,_that.placesGained);case SpeedTrapEvent() when speedTrap != null:
 return speedTrap(_that.vehicleIdx,_that.speed,_that.isOverallFastestInSession,_that.isDriverFastestInSession,_that.fastestVehicleIdxInSession,_that.fastestSpeedInSession);case StartLightsEvent() when startLights != null:
 return startLights(_that.numLights);case DriveThroughPenaltyServedEvent() when driveThroughPenaltyServed != null:
 return driveThroughPenaltyServed(_that.vehicleIdx);case StopGoPenaltyServedEvent() when stopGoPenaltyServed != null:
-return stopGoPenaltyServed(_that.vehicleIdx);case FlashbackEvent() when flashback != null:
+return stopGoPenaltyServed(_that.vehicleIdx,_that.stopTime);case FlashbackEvent() when flashback != null:
 return flashback(_that.flashbackFrameIdentifier,_that.flashbackSessionTime);case ButtonsEvent() when buttons != null:
-return buttons(_that.buttonStatus);case OvertakeEvent() when overtake != null:
+return buttons(_that.buttonStatus);case RedFlagEvent() when redFlag != null:
+return redFlag();case OvertakeEvent() when overtake != null:
 return overtake(_that.overtakingVehicleIdx,_that.beingOvertakenVehicleIdx);case SafetyCarEvent() when safetyCar != null:
 return safetyCar(_that.safetyCarType,_that.eventType);case CollisionEvent() when collision != null:
 return collision(_that.vehicle1Idx,_that.vehicle2Idx);case _:
@@ -315,10 +327,11 @@ as double,
 
 
 class RetirementEvent implements EventDataDetails {
-  const RetirementEvent({required this.vehicleIdx});
+  const RetirementEvent({required this.vehicleIdx, this.reason});
   
 
  final  int vehicleIdx;
+ final  int? reason;
 
 /// Create a copy of EventDataDetails
 /// with the given fields replaced by the non-null parameter values.
@@ -330,16 +343,16 @@ $RetirementEventCopyWith<RetirementEvent> get copyWith => _$RetirementEventCopyW
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RetirementEvent&&(identical(other.vehicleIdx, vehicleIdx) || other.vehicleIdx == vehicleIdx));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RetirementEvent&&(identical(other.vehicleIdx, vehicleIdx) || other.vehicleIdx == vehicleIdx)&&(identical(other.reason, reason) || other.reason == reason));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,vehicleIdx);
+int get hashCode => Object.hash(runtimeType,vehicleIdx,reason);
 
 @override
 String toString() {
-  return 'EventDataDetails.retirement(vehicleIdx: $vehicleIdx)';
+  return 'EventDataDetails.retirement(vehicleIdx: $vehicleIdx, reason: $reason)';
 }
 
 
@@ -350,7 +363,7 @@ abstract mixin class $RetirementEventCopyWith<$Res> implements $EventDataDetails
   factory $RetirementEventCopyWith(RetirementEvent value, $Res Function(RetirementEvent) _then) = _$RetirementEventCopyWithImpl;
 @useResult
 $Res call({
- int vehicleIdx
+ int vehicleIdx, int? reason
 });
 
 
@@ -367,10 +380,77 @@ class _$RetirementEventCopyWithImpl<$Res>
 
 /// Create a copy of EventDataDetails
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? vehicleIdx = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? vehicleIdx = null,Object? reason = freezed,}) {
   return _then(RetirementEvent(
 vehicleIdx: null == vehicleIdx ? _self.vehicleIdx : vehicleIdx // ignore: cast_nullable_to_non_nullable
-as int,
+as int,reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
+as int?,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class DRSDisabledEvent implements EventDataDetails {
+  const DRSDisabledEvent({this.reason});
+  
+
+ final  int? reason;
+
+/// Create a copy of EventDataDetails
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$DRSDisabledEventCopyWith<DRSDisabledEvent> get copyWith => _$DRSDisabledEventCopyWithImpl<DRSDisabledEvent>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DRSDisabledEvent&&(identical(other.reason, reason) || other.reason == reason));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,reason);
+
+@override
+String toString() {
+  return 'EventDataDetails.drsDisabled(reason: $reason)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $DRSDisabledEventCopyWith<$Res> implements $EventDataDetailsCopyWith<$Res> {
+  factory $DRSDisabledEventCopyWith(DRSDisabledEvent value, $Res Function(DRSDisabledEvent) _then) = _$DRSDisabledEventCopyWithImpl;
+@useResult
+$Res call({
+ int? reason
+});
+
+
+
+
+}
+/// @nodoc
+class _$DRSDisabledEventCopyWithImpl<$Res>
+    implements $DRSDisabledEventCopyWith<$Res> {
+  _$DRSDisabledEventCopyWithImpl(this._self, this._then);
+
+  final DRSDisabledEvent _self;
+  final $Res Function(DRSDisabledEvent) _then;
+
+/// Create a copy of EventDataDetails
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? reason = freezed,}) {
+  return _then(DRSDisabledEvent(
+reason: freezed == reason ? _self.reason : reason // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 
@@ -799,10 +879,11 @@ as int,
 
 
 class StopGoPenaltyServedEvent implements EventDataDetails {
-  const StopGoPenaltyServedEvent({required this.vehicleIdx});
+  const StopGoPenaltyServedEvent({required this.vehicleIdx, this.stopTime});
   
 
  final  int vehicleIdx;
+ final  double? stopTime;
 
 /// Create a copy of EventDataDetails
 /// with the given fields replaced by the non-null parameter values.
@@ -814,16 +895,16 @@ $StopGoPenaltyServedEventCopyWith<StopGoPenaltyServedEvent> get copyWith => _$St
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StopGoPenaltyServedEvent&&(identical(other.vehicleIdx, vehicleIdx) || other.vehicleIdx == vehicleIdx));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StopGoPenaltyServedEvent&&(identical(other.vehicleIdx, vehicleIdx) || other.vehicleIdx == vehicleIdx)&&(identical(other.stopTime, stopTime) || other.stopTime == stopTime));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,vehicleIdx);
+int get hashCode => Object.hash(runtimeType,vehicleIdx,stopTime);
 
 @override
 String toString() {
-  return 'EventDataDetails.stopGoPenaltyServed(vehicleIdx: $vehicleIdx)';
+  return 'EventDataDetails.stopGoPenaltyServed(vehicleIdx: $vehicleIdx, stopTime: $stopTime)';
 }
 
 
@@ -834,7 +915,7 @@ abstract mixin class $StopGoPenaltyServedEventCopyWith<$Res> implements $EventDa
   factory $StopGoPenaltyServedEventCopyWith(StopGoPenaltyServedEvent value, $Res Function(StopGoPenaltyServedEvent) _then) = _$StopGoPenaltyServedEventCopyWithImpl;
 @useResult
 $Res call({
- int vehicleIdx
+ int vehicleIdx, double? stopTime
 });
 
 
@@ -851,10 +932,11 @@ class _$StopGoPenaltyServedEventCopyWithImpl<$Res>
 
 /// Create a copy of EventDataDetails
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? vehicleIdx = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? vehicleIdx = null,Object? stopTime = freezed,}) {
   return _then(StopGoPenaltyServedEvent(
 vehicleIdx: null == vehicleIdx ? _self.vehicleIdx : vehicleIdx // ignore: cast_nullable_to_non_nullable
-as int,
+as int,stopTime: freezed == stopTime ? _self.stopTime : stopTime // ignore: cast_nullable_to_non_nullable
+as double?,
   ));
 }
 
@@ -994,6 +1076,38 @@ as int,
 
 
 }
+
+/// @nodoc
+
+
+class RedFlagEvent implements EventDataDetails {
+  const RedFlagEvent();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RedFlagEvent);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'EventDataDetails.redFlag()';
+}
+
+
+}
+
+
+
 
 /// @nodoc
 

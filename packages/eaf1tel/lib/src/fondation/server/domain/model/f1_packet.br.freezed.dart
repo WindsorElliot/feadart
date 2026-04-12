@@ -55,7 +55,7 @@ extension F1PacketPatterns on F1Packet {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( MotionPacket value)?  motion,TResult Function( SessionPacket value)?  session,TResult Function( LapDataPacket value)?  lapData,TResult Function( EventPacket value)?  event,TResult Function( ParticipantsPacket value)?  participants,TResult Function( CarSetupsPacket value)?  carSetups,TResult Function( CarTelemetryPacket value)?  carTelemetry,TResult Function( CarStatusPacket value)?  carStatus,TResult Function( FinalClassificationPacket value)?  finalClassification,TResult Function( LobbyInfoPacket value)?  lobbyInfo,TResult Function( CarDamagePacket value)?  carDamage,TResult Function( SessionHistoryPacket value)?  sessionHistory,TResult Function( TyreSetsPacket value)?  tyreSets,TResult Function( MotionExPacket value)?  motionEx,TResult Function( TimeTrialPacket value)?  timeTrial,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( MotionPacket value)?  motion,TResult Function( SessionPacket value)?  session,TResult Function( LapDataPacket value)?  lapData,TResult Function( EventPacket value)?  event,TResult Function( ParticipantsPacket value)?  participants,TResult Function( CarSetupsPacket value)?  carSetups,TResult Function( CarTelemetryPacket value)?  carTelemetry,TResult Function( CarStatusPacket value)?  carStatus,TResult Function( FinalClassificationPacket value)?  finalClassification,TResult Function( LobbyInfoPacket value)?  lobbyInfo,TResult Function( CarDamagePacket value)?  carDamage,TResult Function( SessionHistoryPacket value)?  sessionHistory,TResult Function( TyreSetsPacket value)?  tyreSets,TResult Function( MotionExPacket value)?  motionEx,TResult Function( TimeTrialPacket value)?  timeTrial,TResult Function( LapPositionsPacket value)?  lapPositions,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case MotionPacket() when motion != null:
@@ -73,7 +73,8 @@ return carDamage(_that);case SessionHistoryPacket() when sessionHistory != null:
 return sessionHistory(_that);case TyreSetsPacket() when tyreSets != null:
 return tyreSets(_that);case MotionExPacket() when motionEx != null:
 return motionEx(_that);case TimeTrialPacket() when timeTrial != null:
-return timeTrial(_that);case _:
+return timeTrial(_that);case LapPositionsPacket() when lapPositions != null:
+return lapPositions(_that);case _:
   return orElse();
 
 }
@@ -91,7 +92,7 @@ return timeTrial(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( MotionPacket value)  motion,required TResult Function( SessionPacket value)  session,required TResult Function( LapDataPacket value)  lapData,required TResult Function( EventPacket value)  event,required TResult Function( ParticipantsPacket value)  participants,required TResult Function( CarSetupsPacket value)  carSetups,required TResult Function( CarTelemetryPacket value)  carTelemetry,required TResult Function( CarStatusPacket value)  carStatus,required TResult Function( FinalClassificationPacket value)  finalClassification,required TResult Function( LobbyInfoPacket value)  lobbyInfo,required TResult Function( CarDamagePacket value)  carDamage,required TResult Function( SessionHistoryPacket value)  sessionHistory,required TResult Function( TyreSetsPacket value)  tyreSets,required TResult Function( MotionExPacket value)  motionEx,required TResult Function( TimeTrialPacket value)  timeTrial,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( MotionPacket value)  motion,required TResult Function( SessionPacket value)  session,required TResult Function( LapDataPacket value)  lapData,required TResult Function( EventPacket value)  event,required TResult Function( ParticipantsPacket value)  participants,required TResult Function( CarSetupsPacket value)  carSetups,required TResult Function( CarTelemetryPacket value)  carTelemetry,required TResult Function( CarStatusPacket value)  carStatus,required TResult Function( FinalClassificationPacket value)  finalClassification,required TResult Function( LobbyInfoPacket value)  lobbyInfo,required TResult Function( CarDamagePacket value)  carDamage,required TResult Function( SessionHistoryPacket value)  sessionHistory,required TResult Function( TyreSetsPacket value)  tyreSets,required TResult Function( MotionExPacket value)  motionEx,required TResult Function( TimeTrialPacket value)  timeTrial,required TResult Function( LapPositionsPacket value)  lapPositions,}){
 final _that = this;
 switch (_that) {
 case MotionPacket():
@@ -109,7 +110,8 @@ return carDamage(_that);case SessionHistoryPacket():
 return sessionHistory(_that);case TyreSetsPacket():
 return tyreSets(_that);case MotionExPacket():
 return motionEx(_that);case TimeTrialPacket():
-return timeTrial(_that);}
+return timeTrial(_that);case LapPositionsPacket():
+return lapPositions(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -123,7 +125,7 @@ return timeTrial(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( MotionPacket value)?  motion,TResult? Function( SessionPacket value)?  session,TResult? Function( LapDataPacket value)?  lapData,TResult? Function( EventPacket value)?  event,TResult? Function( ParticipantsPacket value)?  participants,TResult? Function( CarSetupsPacket value)?  carSetups,TResult? Function( CarTelemetryPacket value)?  carTelemetry,TResult? Function( CarStatusPacket value)?  carStatus,TResult? Function( FinalClassificationPacket value)?  finalClassification,TResult? Function( LobbyInfoPacket value)?  lobbyInfo,TResult? Function( CarDamagePacket value)?  carDamage,TResult? Function( SessionHistoryPacket value)?  sessionHistory,TResult? Function( TyreSetsPacket value)?  tyreSets,TResult? Function( MotionExPacket value)?  motionEx,TResult? Function( TimeTrialPacket value)?  timeTrial,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( MotionPacket value)?  motion,TResult? Function( SessionPacket value)?  session,TResult? Function( LapDataPacket value)?  lapData,TResult? Function( EventPacket value)?  event,TResult? Function( ParticipantsPacket value)?  participants,TResult? Function( CarSetupsPacket value)?  carSetups,TResult? Function( CarTelemetryPacket value)?  carTelemetry,TResult? Function( CarStatusPacket value)?  carStatus,TResult? Function( FinalClassificationPacket value)?  finalClassification,TResult? Function( LobbyInfoPacket value)?  lobbyInfo,TResult? Function( CarDamagePacket value)?  carDamage,TResult? Function( SessionHistoryPacket value)?  sessionHistory,TResult? Function( TyreSetsPacket value)?  tyreSets,TResult? Function( MotionExPacket value)?  motionEx,TResult? Function( TimeTrialPacket value)?  timeTrial,TResult? Function( LapPositionsPacket value)?  lapPositions,}){
 final _that = this;
 switch (_that) {
 case MotionPacket() when motion != null:
@@ -141,7 +143,8 @@ return carDamage(_that);case SessionHistoryPacket() when sessionHistory != null:
 return sessionHistory(_that);case TyreSetsPacket() when tyreSets != null:
 return tyreSets(_that);case MotionExPacket() when motionEx != null:
 return motionEx(_that);case TimeTrialPacket() when timeTrial != null:
-return timeTrial(_that);case _:
+return timeTrial(_that);case LapPositionsPacket() when lapPositions != null:
+return lapPositions(_that);case _:
   return null;
 
 }
@@ -158,7 +161,7 @@ return timeTrial(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( PacketMotionData data)?  motion,TResult Function( PacketSessionData data)?  session,TResult Function( PacketLapData data)?  lapData,TResult Function( PacketEventData data)?  event,TResult Function( PacketParticipantsData data)?  participants,TResult Function( PacketCarSetupData data)?  carSetups,TResult Function( PacketCarTelemetryData data)?  carTelemetry,TResult Function( PacketCarStatusData data)?  carStatus,TResult Function( PacketFinalClassificationData data)?  finalClassification,TResult Function( PacketLobbyInfoData data)?  lobbyInfo,TResult Function( PacketCarDamageData data)?  carDamage,TResult Function( PacketSessionHistoryData data)?  sessionHistory,TResult Function( PacketTyreSetsData data)?  tyreSets,TResult Function( PacketMotionExData data)?  motionEx,TResult Function( PacketTimeTrialData data)?  timeTrial,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( PacketMotionData data)?  motion,TResult Function( PacketSessionData data)?  session,TResult Function( PacketLapData data)?  lapData,TResult Function( PacketEventData data)?  event,TResult Function( PacketParticipantsData data)?  participants,TResult Function( PacketCarSetupData data)?  carSetups,TResult Function( PacketCarTelemetryData data)?  carTelemetry,TResult Function( PacketCarStatusData data)?  carStatus,TResult Function( PacketFinalClassificationData data)?  finalClassification,TResult Function( PacketLobbyInfoData data)?  lobbyInfo,TResult Function( PacketCarDamageData data)?  carDamage,TResult Function( PacketSessionHistoryData data)?  sessionHistory,TResult Function( PacketTyreSetsData data)?  tyreSets,TResult Function( PacketMotionExData data)?  motionEx,TResult Function( PacketTimeTrialData data)?  timeTrial,TResult Function( PacketLapPositionsData data)?  lapPositions,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case MotionPacket() when motion != null:
 return motion(_that.data);case SessionPacket() when session != null:
@@ -175,7 +178,8 @@ return carDamage(_that.data);case SessionHistoryPacket() when sessionHistory != 
 return sessionHistory(_that.data);case TyreSetsPacket() when tyreSets != null:
 return tyreSets(_that.data);case MotionExPacket() when motionEx != null:
 return motionEx(_that.data);case TimeTrialPacket() when timeTrial != null:
-return timeTrial(_that.data);case _:
+return timeTrial(_that.data);case LapPositionsPacket() when lapPositions != null:
+return lapPositions(_that.data);case _:
   return orElse();
 
 }
@@ -193,7 +197,7 @@ return timeTrial(_that.data);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( PacketMotionData data)  motion,required TResult Function( PacketSessionData data)  session,required TResult Function( PacketLapData data)  lapData,required TResult Function( PacketEventData data)  event,required TResult Function( PacketParticipantsData data)  participants,required TResult Function( PacketCarSetupData data)  carSetups,required TResult Function( PacketCarTelemetryData data)  carTelemetry,required TResult Function( PacketCarStatusData data)  carStatus,required TResult Function( PacketFinalClassificationData data)  finalClassification,required TResult Function( PacketLobbyInfoData data)  lobbyInfo,required TResult Function( PacketCarDamageData data)  carDamage,required TResult Function( PacketSessionHistoryData data)  sessionHistory,required TResult Function( PacketTyreSetsData data)  tyreSets,required TResult Function( PacketMotionExData data)  motionEx,required TResult Function( PacketTimeTrialData data)  timeTrial,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( PacketMotionData data)  motion,required TResult Function( PacketSessionData data)  session,required TResult Function( PacketLapData data)  lapData,required TResult Function( PacketEventData data)  event,required TResult Function( PacketParticipantsData data)  participants,required TResult Function( PacketCarSetupData data)  carSetups,required TResult Function( PacketCarTelemetryData data)  carTelemetry,required TResult Function( PacketCarStatusData data)  carStatus,required TResult Function( PacketFinalClassificationData data)  finalClassification,required TResult Function( PacketLobbyInfoData data)  lobbyInfo,required TResult Function( PacketCarDamageData data)  carDamage,required TResult Function( PacketSessionHistoryData data)  sessionHistory,required TResult Function( PacketTyreSetsData data)  tyreSets,required TResult Function( PacketMotionExData data)  motionEx,required TResult Function( PacketTimeTrialData data)  timeTrial,required TResult Function( PacketLapPositionsData data)  lapPositions,}) {final _that = this;
 switch (_that) {
 case MotionPacket():
 return motion(_that.data);case SessionPacket():
@@ -210,7 +214,8 @@ return carDamage(_that.data);case SessionHistoryPacket():
 return sessionHistory(_that.data);case TyreSetsPacket():
 return tyreSets(_that.data);case MotionExPacket():
 return motionEx(_that.data);case TimeTrialPacket():
-return timeTrial(_that.data);}
+return timeTrial(_that.data);case LapPositionsPacket():
+return lapPositions(_that.data);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -224,7 +229,7 @@ return timeTrial(_that.data);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( PacketMotionData data)?  motion,TResult? Function( PacketSessionData data)?  session,TResult? Function( PacketLapData data)?  lapData,TResult? Function( PacketEventData data)?  event,TResult? Function( PacketParticipantsData data)?  participants,TResult? Function( PacketCarSetupData data)?  carSetups,TResult? Function( PacketCarTelemetryData data)?  carTelemetry,TResult? Function( PacketCarStatusData data)?  carStatus,TResult? Function( PacketFinalClassificationData data)?  finalClassification,TResult? Function( PacketLobbyInfoData data)?  lobbyInfo,TResult? Function( PacketCarDamageData data)?  carDamage,TResult? Function( PacketSessionHistoryData data)?  sessionHistory,TResult? Function( PacketTyreSetsData data)?  tyreSets,TResult? Function( PacketMotionExData data)?  motionEx,TResult? Function( PacketTimeTrialData data)?  timeTrial,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( PacketMotionData data)?  motion,TResult? Function( PacketSessionData data)?  session,TResult? Function( PacketLapData data)?  lapData,TResult? Function( PacketEventData data)?  event,TResult? Function( PacketParticipantsData data)?  participants,TResult? Function( PacketCarSetupData data)?  carSetups,TResult? Function( PacketCarTelemetryData data)?  carTelemetry,TResult? Function( PacketCarStatusData data)?  carStatus,TResult? Function( PacketFinalClassificationData data)?  finalClassification,TResult? Function( PacketLobbyInfoData data)?  lobbyInfo,TResult? Function( PacketCarDamageData data)?  carDamage,TResult? Function( PacketSessionHistoryData data)?  sessionHistory,TResult? Function( PacketTyreSetsData data)?  tyreSets,TResult? Function( PacketMotionExData data)?  motionEx,TResult? Function( PacketTimeTrialData data)?  timeTrial,TResult? Function( PacketLapPositionsData data)?  lapPositions,}) {final _that = this;
 switch (_that) {
 case MotionPacket() when motion != null:
 return motion(_that.data);case SessionPacket() when session != null:
@@ -241,7 +246,8 @@ return carDamage(_that.data);case SessionHistoryPacket() when sessionHistory != 
 return sessionHistory(_that.data);case TyreSetsPacket() when tyreSets != null:
 return tyreSets(_that.data);case MotionExPacket() when motionEx != null:
 return motionEx(_that.data);case TimeTrialPacket() when timeTrial != null:
-return timeTrial(_that.data);case _:
+return timeTrial(_that.data);case LapPositionsPacket() when lapPositions != null:
+return lapPositions(_that.data);case _:
   return null;
 
 }
@@ -1369,6 +1375,81 @@ as PacketTimeTrialData,
 $PacketTimeTrialDataCopyWith<$Res> get data {
   
   return $PacketTimeTrialDataCopyWith<$Res>(_self.data, (value) {
+    return _then(_self.copyWith(data: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class LapPositionsPacket implements F1Packet {
+  const LapPositionsPacket({required this.data});
+  
+
+@override final  PacketLapPositionsData data;
+
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LapPositionsPacketCopyWith<LapPositionsPacket> get copyWith => _$LapPositionsPacketCopyWithImpl<LapPositionsPacket>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LapPositionsPacket&&(identical(other.data, data) || other.data == data));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,data);
+
+@override
+String toString() {
+  return 'F1Packet.lapPositions(data: $data)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $LapPositionsPacketCopyWith<$Res> implements $F1PacketCopyWith<$Res> {
+  factory $LapPositionsPacketCopyWith(LapPositionsPacket value, $Res Function(LapPositionsPacket) _then) = _$LapPositionsPacketCopyWithImpl;
+@useResult
+$Res call({
+ PacketLapPositionsData data
+});
+
+
+$PacketLapPositionsDataCopyWith<$Res> get data;
+
+}
+/// @nodoc
+class _$LapPositionsPacketCopyWithImpl<$Res>
+    implements $LapPositionsPacketCopyWith<$Res> {
+  _$LapPositionsPacketCopyWithImpl(this._self, this._then);
+
+  final LapPositionsPacket _self;
+  final $Res Function(LapPositionsPacket) _then;
+
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? data = null,}) {
+  return _then(LapPositionsPacket(
+data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as PacketLapPositionsData,
+  ));
+}
+
+/// Create a copy of F1Packet
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PacketLapPositionsDataCopyWith<$Res> get data {
+  
+  return $PacketLapPositionsDataCopyWith<$Res>(_self.data, (value) {
     return _then(_self.copyWith(data: value));
   });
 }
