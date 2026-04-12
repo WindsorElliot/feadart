@@ -6,6 +6,7 @@ environment:
 
 workspace:
   - apps/f1eadart
+  - apps/widgetbook
   - packages/eaf1tel
   - packages/assets_dealer
   - packages/suzuka
